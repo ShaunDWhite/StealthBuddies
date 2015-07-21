@@ -33,7 +33,7 @@ public class s_PlayerOneMovement : MonoBehaviour {
 		Movement();	
 	}
 	public void Movement(){
-		transform.Translate(0,-(Input.GetAxis("Vertical") * Time.deltaTime * MovementSpeed),0);
-		transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * MovementSpeed, 0, 0); 
+		transform.Translate(0,-(Input.GetAxis("Vertical") * Time.deltaTime * MovementSpeed),0);			//Vertical movement
+		transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * MovementSpeed, 0, 0); 		// Horizontal movement
 	}		
 }

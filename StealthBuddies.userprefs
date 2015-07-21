@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\s_PlayerOneMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\s_PlayerOneMovement.cs" Line="40" Column="1" />
+      <File FileName="Assets\Scripts\s_PlayerOneMovement.cs" Line="27" Column="21" />
+      <File FileName="Assets\Scripts\s_ObtainSpeaker.cs" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
