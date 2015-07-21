@@ -18,11 +18,11 @@ public class s_GuardPatrol : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Patrol ();
+		Patrol ();
 	}
 
 	void Patrol(){
-
+		transform.Translate (5 * MovingSpeed * Time.deltaTime, 0, 0);
 	}
 
 

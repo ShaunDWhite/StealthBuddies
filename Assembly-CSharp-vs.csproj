@@ -46,9 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\s_GameManager.cs" />
      <Compile Include="Assets\Scripts\s_GuardPatrol.cs" />
      <Compile Include="Assets\Scripts\s_ObtainSpeaker.cs" />
      <Compile Include="Assets\Scripts\s_PlayerOneMovement.cs" />
+     <Compile Include="Assets\Scripts\s_TriggerCamera.cs" />
+     <Compile Include="Assets\Scripts\s_TriggerGuard.cs" />
+     <Compile Include="Assets\Scripts\s_TriggerLaser.cs" />
+     <Compile Include="Assets\Scripts\s_TriggerSpotlight.cs" />
+     <Compile Include="Assets\Scripts\s_TriggerTemplate.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
