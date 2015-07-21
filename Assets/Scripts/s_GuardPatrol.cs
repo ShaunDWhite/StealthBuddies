@@ -9,11 +9,8 @@ public class s_GuardPatrol : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () {	
 		one = true;
-		two = false;
-		three = false;
-		four = false;
 	}
 	
 	// Update is called once per frame
@@ -22,8 +19,47 @@ public class s_GuardPatrol : MonoBehaviour {
 	}
 
 	void Patrol(){
-		transform.Translate (5 * MovingSpeed * Time.deltaTime, 0, 0);
+		if(one)
+			transform.Translate (5 * MovingSpeed * Time.deltaTime, 0, 0);
+
+
+		if(two)
+			transform.Translate (-(5 * MovingSpeed * Time.deltaTime), 0, 0);
+
+		if(three)
+			transform.Translate (0, 5 * MovingSpeed * Time.deltaTime, 0);
+
+		if(four)
+			transform.Translate (0, -(5 * MovingSpeed * Time.deltaTime), 0);
+
 	}
+
+
+	void OnTriggerEnter(Collider col){
+		if (col.gameObject.name == "Post One") {		
+			two = true;
+			four = false;
+			one = false;
+		}
+		if (col.gameObject.name == "Post Two") {
+			three = true;
+			two = false;
+		}
+		if (col.gameObject.name == "Post Three") {
+			one = true;
+			three = false;
+		}
+		if (col.gameObject.name == "Post Four") {
+			four = true;
+			one = false;
+		}
+
+
+
+
+	}
+
+
 
 
 

@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\s_PlayerOneMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\s_GuardPatrol.cs">
     <Files>
-      <File FileName="Assets\Scripts\s_PlayerOneMovement.cs" Line="27" Column="21" />
+      <File FileName="Assets\Scripts\s_PlayerOneMovement.cs" Line="29" Column="3" />
       <File FileName="Assets\Scripts\s_ObtainSpeaker.cs" Line="8" Column="1" />
+      <File FileName="Assets\Scripts\s_GuardPatrol.cs" Line="13" Column="14" />
+      <File FileName="H:\Uni stuff\Trimester 4\Studio\Robot Game'\Game\Assets\Scripts\Menus\s_MainToControl.cs" Line="23" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
