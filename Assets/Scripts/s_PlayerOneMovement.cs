@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class s_ControllerInput : MonoBehaviour {
+public class s_PlayerOneMovement : MonoBehaviour {
 
 	/*
 	 * Edit - Project setting - Input
