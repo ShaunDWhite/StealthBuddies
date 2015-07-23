@@ -3,13 +3,19 @@ using System.Collections;
 
 public class s_CameraOff : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public s_CameraOn CameraOn;
+
+	void OnTriggerEnter(Collider col){
+		if(col.gameObject.name == "Player One"){
+			Debug.Log("le button is pressed, timer starts");
+			StartCoroutine(CameraOff());
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public IEnumerator CameraOff(){
+		CameraOn.IsOn = false;
+		yield return new WaitForSeconds(5);
+		CameraOn.IsOn = true;
+		Debug.Log("Le timer is finished");
 	}
 }
