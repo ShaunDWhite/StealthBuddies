@@ -13,9 +13,9 @@ public class s_CameraOff : MonoBehaviour {
 	}
 
 	public IEnumerator CameraOff(){
-		CameraOn.IsOn = false;
-		yield return new WaitForSeconds(5);
-		CameraOn.IsOn = true;
+		CameraOn.IsOn = false;				//deactivates camera
+		yield return new WaitForSeconds(5);	//waits 5 seconds
+		CameraOn.IsOn = true;				//camera comes back on 
 		Debug.Log("Le timer is finished");
 	}
 }
