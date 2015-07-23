@@ -10,6 +10,12 @@ public class s_CameraOff : MonoBehaviour {
 			Debug.Log("le button is pressed, timer starts");
 			StartCoroutine(CameraOff());
 		}
+
+		else if(col.gameObject.name == "Player Two"){
+			Debug.Log("le button is pressed, timer starts");
+			StartCoroutine(CameraOff());
+		}
+
 	}
 
 	public IEnumerator CameraOff(){

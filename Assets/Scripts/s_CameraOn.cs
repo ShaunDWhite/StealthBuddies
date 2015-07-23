@@ -12,7 +12,7 @@ public class s_CameraOn : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		if(col.gameObject.name == "Camera Off Button Placeholder_Right"){
+		if(col.gameObject.name == "Player Two"){
 			Debug.Log("alarm");
 		}
 	}
