@@ -41,6 +41,7 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_WIN
 -define:UNITY_PRO_LICENSE
+Assets/Scripts/s_FOV2D.cs
 Assets/Scripts/s_GameManager.cs
 Assets/Scripts/s_GuardPatrol.cs
 Assets/Scripts/s_ObtainSpeaker.cs
