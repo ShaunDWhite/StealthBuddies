@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class s_TriggerTemplate : MonoBehaviour {
+public class s_TriggerMixTape : MonoBehaviour {
 
-	//Copy and paste this into a new script for use on other objects. 
 
+	
 	public s_GameManager gameManager;
-
-
-
+	
+	
+	
 	// Use this for initialization
 	void Start () {
 		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
@@ -16,9 +16,9 @@ public class s_TriggerTemplate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
-
+	
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.tag == "Player One") {
@@ -27,8 +27,6 @@ public class s_TriggerTemplate : MonoBehaviour {
 			print ("shiet again");
 		}
 	}
-
-
-
-
+	
+	
 }
