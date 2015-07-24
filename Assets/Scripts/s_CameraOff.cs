@@ -22,15 +22,9 @@ public class s_CameraOff : MonoBehaviour {
 	}
 
 	public IEnumerator CameraOneOff(){
-		CameraOne.IsOn = false;
-		for(a = 0; a < 6; a++){		
-			yield return new WaitForSeconds(1);
-			Dude = (5 - a);
-			TimeLeft.text = "Time Left = " + Dude.ToString ();
-		}
-		CameraOne.IsOn = true;
-		a = 0;
-		TimeLeft.text = "Time Left = 5";
+		CameraOne.IsOn = false;			
+		yield return new WaitForSeconds(1);
+		CameraOne.IsOn = true;	
 		Debug.Log("Le timer is finished");
 	}
 
@@ -43,20 +37,16 @@ public class s_CameraOff : MonoBehaviour {
 
 
 
-
-
-
-
-//	public IEnumerator LoopTest(){
-//		for(int a = 0; a < 6; a++){
-//			print (a);
-//			yield return new WaitForSeconds(1);
-//		}
+//	CameraOne.IsOn = false;
+//	for(a = 0; a < 6; a++){		
+//		yield return new WaitForSeconds(1);
+//		Dude = (5 - a);
+//		TimeLeft.text = "Time Left = " + Dude.ToString ();
 //	}
-//
-//	void Start(){
-//		StartCoroutine(LoopTest());
-//	}
+//	CameraOne.IsOn = true;
+//	a = 0;
+//	TimeLeft.text = "Time Left = 5";
+//	Debug.Log("Le timer is finished");
 
 
 
