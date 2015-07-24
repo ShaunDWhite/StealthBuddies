@@ -6,13 +6,30 @@ public class s_SpotlightOn : MonoBehaviour {
 	public bool LightIsOn = true;
 
 
-	// Use this for initialization
-	void Start () {
-	
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.name == "PlayerOneTest"){
+			if(LightIsOn){
+				Debug.Log("p1 alarm");
+			}
+			else if(!LightIsOn){
+				Debug.Log("p1 no alarm");
+			}
+		}
+		else if(col.gameObject.name == "PlayerTwoTest"){
+			if(LightIsOn){
+				Debug.Log("p2 alarm");
+			}
+			else if(!LightIsOn){
+				Debug.Log("p2 no alarm");
+			}
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+
+//	void OnTriggerStay2D(Collider2D col){
+//		if(col.gameObject.name == "PlayerOneTest"){
+//			if(LightIsOn && 
+//		}
+//	}
+
 }
