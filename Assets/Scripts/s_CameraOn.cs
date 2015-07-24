@@ -11,12 +11,14 @@ public class s_CameraOn : MonoBehaviour {
 		Debug.Log("IsOn = " + IsOn);	
 	}
 
-	void OnTriggerEnter(Collider col){
-		if(col.gameObject.name == "Player Two"){
-			Debug.Log("alarm");
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.name == "PlayerOneTest"){
+			if(IsOn){
+				Debug.Log("alarm");
+			}
+			else if(!IsOn){
+				Debug.Log("no alarm");
+			}
 		}
 	}
-
-
-
 }
