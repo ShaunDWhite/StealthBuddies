@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class s_CameraOff : MonoBehaviour {
 
 	public s_CameraOn CameraOne, CameraTwo;
 	public float Timer = 5;
+	public Text TimeLeft;
+	public int Dude;
+	public int a;
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.name == "PlayerOneTest"){
@@ -18,9 +22,15 @@ public class s_CameraOff : MonoBehaviour {
 	}
 
 	public IEnumerator CameraOneOff(){
-		CameraOne.IsOn = false;				//deactivates camera
-		yield return new WaitForSeconds(Timer);	//waits 5 seconds
-		CameraOne.IsOn = true;				//camera comes back on 
+		CameraOne.IsOn = false;
+		for(a = 0; a < 6; a++){		
+			yield return new WaitForSeconds(1);
+			Dude = (5 - a);
+			TimeLeft.text = "Time Left = " + Dude.ToString ();
+		}
+		CameraOne.IsOn = true;
+		a = 0;
+		TimeLeft.text = "Time Left = 5";
 		Debug.Log("Le timer is finished");
 	}
 
@@ -30,5 +40,25 @@ public class s_CameraOff : MonoBehaviour {
 		CameraTwo.IsOn = true;				//camera comes back on 
 		Debug.Log("Le Camera 2 timer is finished");
 	}
+
+
+
+
+
+
+
+//	public IEnumerator LoopTest(){
+//		for(int a = 0; a < 6; a++){
+//			print (a);
+//			yield return new WaitForSeconds(1);
+//		}
+//	}
+//
+//	void Start(){
+//		StartCoroutine(LoopTest());
+//	}
+
+
+
 
 }
