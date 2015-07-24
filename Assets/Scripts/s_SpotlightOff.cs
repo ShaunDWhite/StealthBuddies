@@ -6,8 +6,8 @@ public class s_SpotlightOff : MonoBehaviour {
 	public s_SpotlightOn LightOne, LightTwo;
 	public float Timer = 5;
 
-	void OnTriggerEnter(Collider col){
-		if(col.gameObject.name == "Player Two"){
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.name == "PlayerTwoTest"){
 			StartCoroutine(LightOff ());
 		}
 	}

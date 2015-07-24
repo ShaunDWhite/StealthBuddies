@@ -22,7 +22,7 @@ public class s_PlayerOneMovement : MonoBehaviour {
 	 * 		Joy num: all joysticks 
 	 * */
 
-	public float MovementSpeed = 30;
+	public float MovementSpeed = 5;
 
 	// Use this for initialization
 	void Start () {
