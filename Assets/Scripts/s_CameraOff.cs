@@ -23,7 +23,7 @@ public class s_CameraOff : MonoBehaviour {
 
 	public IEnumerator CameraOneOff(){
 		CameraOne.IsOn = false;			
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(Timer);
 		CameraOne.IsOn = true;	
 		Debug.Log("Le timer is finished");
 	}

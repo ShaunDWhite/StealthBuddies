@@ -8,7 +8,7 @@ public class s_CameraOn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("IsOn = " + IsOn);	
+
 	}
 
 	void OnTriggerEnter2D(Collider2D col){

@@ -13,7 +13,6 @@ public class s_SpotlightOn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("Light is one = " + LightIsOn);
 	
 	}
 }
