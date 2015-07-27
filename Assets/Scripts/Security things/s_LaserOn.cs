@@ -15,6 +15,7 @@ public class s_LaserOn : MonoBehaviour {
 		else if(col.gameObject.name == "PlayerTwoTest"){
 			if(IsTurnedOn){
 				Debug.Log("P2 alarm");			
+			}
 		}
 	}
 }
