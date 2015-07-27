@@ -8,8 +8,13 @@ public class s_Power : MonoBehaviour {
 			PowerOn_Left,
 			PowerOff_Left,
 			PowerOn_Right,
-			PowerOff_Right;
+			PowerOff_Right,
+			PowerOn_Top,
+			PowerOff_Top,
+			PowerOn_Bottom,
+			PowerOff_Bottom;
 	public s_CameraOn CameraOne, CameraTwo;
+	public s_SpotlightOn SpotLightOne, SpotLightTwo;
 
 
 	// Use this for initialization
@@ -26,6 +31,8 @@ public class s_Power : MonoBehaviour {
 	void Update () {	
 		OneHasPower();
 		TwoHasPower();
+		TopHasPower();
+		BottomHasPower();
 	}
 
 
@@ -53,6 +60,31 @@ public class s_Power : MonoBehaviour {
 			PowerOn_Right.SetActive(false);
 		}
 	}
+
+	public void TopHasPower(){
+		if(SpotLightOne.LightIsOn){
+			PowerOn_Top.SetActive(true);
+			PowerOff_Top.SetActive(false);
+		}
+		else if(!SpotLightOne.LightIsOn){
+			PowerOn_Top.SetActive(false);
+			PowerOff_Top.SetActive(true);
+		}
+
+	}
+
+	public void BottomHasPower(){
+		if(SpotLightTwo.LightIsOn){
+			PowerOn_Bottom.SetActive(true);
+			PowerOff_Bottom.SetActive(false);
+		}
+		else if(!SpotLightTwo.LightIsOn){
+			PowerOn_Bottom.SetActive(false);
+			PowerOff_Bottom.SetActive(true);
+		}
+	}
+
+
 
 
 }
