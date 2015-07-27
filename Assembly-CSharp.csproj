@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Level Change\s_LoadLevelTwo.cs" />
      <Compile Include="Assets\Scripts\Menus\s_Start.cs" />
      <Compile Include="Assets\Scripts\Security things\s_CameraOff.cs" />
      <Compile Include="Assets\Scripts\Security things\s_CameraOn.cs" />
