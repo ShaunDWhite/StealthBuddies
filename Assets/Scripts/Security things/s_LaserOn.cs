@@ -11,17 +11,10 @@ public class s_LaserOn : MonoBehaviour {
 			if(IsTurnedOn){
 				Debug.Log("P1 alarm");
 			}
-			else if(!IsTurnedOn){
-				Debug.Log("P1 no alarm");
-			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
 			if(IsTurnedOn){
-				Debug.Log("P2 alarm");
-			}
-			else if(!IsTurnedOn){
-				Debug.Log("P2 no alarm");
-			}
+				Debug.Log("P2 alarm");			
 		}
 	}
 }
