@@ -47,8 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Menus\s_Start.cs" />
-     <Compile Include="Assets\Scripts\s_CameraOff.cs" />
-     <Compile Include="Assets\Scripts\s_CameraOn.cs" />
+     <Compile Include="Assets\Scripts\Security things\s_CameraOff.cs" />
+     <Compile Include="Assets\Scripts\Security things\s_CameraOn.cs" />
+     <Compile Include="Assets\Scripts\Security things\s_LaserOff.cs" />
+     <Compile Include="Assets\Scripts\Security things\s_LaserOn.cs" />
+     <Compile Include="Assets\Scripts\Security things\s_Power.cs" />
+     <Compile Include="Assets\Scripts\Security things\s_SpotlightOff.cs" />
+     <Compile Include="Assets\Scripts\Security things\s_SpotlightOn.cs" />
      <Compile Include="Assets\Scripts\s_FOV2D.cs" />
      <Compile Include="Assets\Scripts\s_GameManager.cs" />
      <Compile Include="Assets\Scripts\s_GuardPatrol.cs" />
@@ -56,9 +61,6 @@
      <Compile Include="Assets\Scripts\s_ObtainSpeaker.cs" />
      <Compile Include="Assets\Scripts\s_PlayerOneMovement.cs" />
      <Compile Include="Assets\Scripts\s_PlayerTwoMovement.cs" />
-     <Compile Include="Assets\Scripts\s_Power.cs" />
-     <Compile Include="Assets\Scripts\s_SpotlightOff.cs" />
-     <Compile Include="Assets\Scripts\s_SpotlightOn.cs" />
      <Compile Include="Assets\Scripts\s_TriggerCamera.cs" />
      <Compile Include="Assets\Scripts\s_TriggerGuard.cs" />
      <Compile Include="Assets\Scripts\s_TriggerLaser.cs" />

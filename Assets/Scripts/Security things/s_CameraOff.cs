@@ -18,11 +18,6 @@ public class s_CameraOff : MonoBehaviour {
 		}
 	}
 
-	void Update(){
-
-	}
-
-
 	public IEnumerator CameraOneOff(){
 		CameraOne.IsOn = false;			
 		yield return new WaitForSeconds(Timer);
@@ -34,21 +29,4 @@ public class s_CameraOff : MonoBehaviour {
 		yield return new WaitForSeconds(Timer);	//waits 5 seconds
 		CameraTwo.IsOn = true;				//camera comes back on 
 	}
-
-
-
-//	CameraOne.IsOn = false;
-//	for(a = 0; a < 6; a++){		
-//		yield return new WaitForSeconds(1);
-//		Dude = (5 - a);
-//		TimeLeft.text = "Time Left = " + Dude.ToString ();
-//	}
-//	CameraOne.IsOn = true;
-//	a = 0;
-//	TimeLeft.text = "Time Left = 5";
-//	Debug.Log("Le timer is finished");
-
-
-
-
 }
