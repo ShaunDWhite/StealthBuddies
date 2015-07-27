@@ -6,33 +6,19 @@ public class s_CameraOn : MonoBehaviour {
 	public bool IsOn = true;
 	public float alarmTime = 3;
 	public string player;
-	public GameObject power, poweroff;
+
 
 	void Start(){
-		power.SetActive(true);
-		poweroff.SetActive(false);
+
 	}
 
 
 	// Update is called once per frame
 	void Update () {
-		IsPower();
-	}
-
-	public void IsPower(){
-		if(IsOn){
-			power.SetActive(true);
-			poweroff.SetActive(false);
-		}
-
-		if(!IsOn){
-			power.SetActive(false);
-			poweroff.SetActive(true);
-
-		}
-		
 
 	}
+
+
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.name == "PlayerOneTest"){

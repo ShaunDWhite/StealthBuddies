@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\s_ObtainSpeaker.cs" />
      <Compile Include="Assets\Scripts\s_PlayerOneMovement.cs" />
      <Compile Include="Assets\Scripts\s_PlayerTwoMovement.cs" />
+     <Compile Include="Assets\Scripts\s_Power.cs" />
      <Compile Include="Assets\Scripts\s_SpotlightOff.cs" />
      <Compile Include="Assets\Scripts\s_SpotlightOn.cs" />
      <Compile Include="Assets\Scripts\s_TriggerCamera.cs" />
