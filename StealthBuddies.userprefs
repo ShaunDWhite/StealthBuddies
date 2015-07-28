@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Security things\s_CameraOff.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Security things\s_SpotlightOn.cs">
     <Files>
-      <File FileName="Assets\Scripts\Security things\s_Power.cs" Line="51" Column="35" />
-      <File FileName="Assets\Scripts\Security things\s_CameraOff.cs" Line="11" Column="2" />
-      <File FileName="Assets\Scripts\Security things\s_SpotlightOff.cs" Line="14" Column="3" />
+      <File FileName="Assets\Scripts\Security things\s_SpotlightOn.cs" Line="11" Column="2" />
+      <File FileName="Assets\Scripts\Security things\s_Power.cs" Line="7" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
