@@ -14,7 +14,9 @@ public class s_Power : MonoBehaviour {
 			PowerOn_Bottom,
 			PowerOff_Bottom,
 			CameraConeOne,
-			CameraConeTwo;
+			CameraConeTwo,
+			SpotlightConeOne,
+			SpotlightConeTwo;
 	public s_CameraOn CameraOne, CameraTwo;
 	public s_SpotlightOn SpotLightOne, SpotLightTwo;
 
@@ -70,10 +72,12 @@ public class s_Power : MonoBehaviour {
 		if(SpotLightOne.LightIsOn){
 			PowerOn_Top.SetActive(true);
 			PowerOff_Top.SetActive(false);
+			SpotlightConeOne.SetActive(true);
 		}
 		else if(!SpotLightOne.LightIsOn){
 			PowerOn_Top.SetActive(false);
 			PowerOff_Top.SetActive(true);
+			SpotlightConeOne.SetActive(false);
 		}
 
 	}
@@ -82,10 +86,12 @@ public class s_Power : MonoBehaviour {
 		if(SpotLightTwo.LightIsOn){
 			PowerOn_Bottom.SetActive(true);
 			PowerOff_Bottom.SetActive(false);
+			SpotlightConeTwo.SetActive(true);
 		}
 		else if(!SpotLightTwo.LightIsOn){
 			PowerOn_Bottom.SetActive(false);
 			PowerOff_Bottom.SetActive(true);
+			SpotlightConeTwo.SetActive(false);
 		}
 	}
 
