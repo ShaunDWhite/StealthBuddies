@@ -7,16 +7,25 @@ public class s_SpotlightOff : MonoBehaviour {
 	public float Timer = 5;
 	public bool P2_Press = false;
 
-	void OnTriggerEnter2D(Collider2D col){
+	void OnTriggerStay2D(Collider2D col){
 		if(col.gameObject.name == "PlayerTwoTest"){
-			StartCoroutine(LightOff ());
+			P2_Press = true;
 		}
 	}
 
-
-	void OnTriggerStay2D(Collider2D col){
-
+	void OnTriggerExit2D(Collider2D col){
+		if(col.gameObject.name == "PlayerTwoTest"){
+			P2_Press = false;
 		}
+	}
+
+	void Update(){
+		if (P2_Press) {
+			if(Input.GetKeyDown(KeyCode.Space)){
+				StartCoroutine(LightOff ());
+			}
+		}
+	}
 
 	public IEnumerator LightOff(){
 		LightOne.LightIsOn = false;

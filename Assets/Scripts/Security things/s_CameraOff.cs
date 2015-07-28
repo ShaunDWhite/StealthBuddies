@@ -9,16 +9,6 @@ public class s_CameraOff : MonoBehaviour {
 	public bool P1_Press = false, 
 				P2_Press = false;
 
-//	void OnTriggerEnter2D(Collider2D col){
-//		if(col.gameObject.name == "PlayerOneTest"){
-//			Debug.Log("le button is pressed, timer starts");
-//			StartCoroutine(CameraOneOff());
-//		}
-//		else if(col.gameObject.name == "PlayerTwoTest"){
-//			Debug.Log("le Camers 2 button is pressed, timer starts");
-//			StartCoroutine(CameraTwoOff());
-//		}
-//	}
 
 	public IEnumerator CameraOneOff(){
 		CameraOne.IsOn = false;			
@@ -35,11 +25,11 @@ public class s_CameraOff : MonoBehaviour {
 
 
 	void Update(){
-//		if (P1_Press) {
-//			if(Input.GetKeyDown(KeyCode.Space)){
-//				StartCoroutine(CameraOneOff());
-//			}
-//		}
+		if (P1_Press) {
+			if(Input.GetButtonDown("A")){
+				StartCoroutine(CameraOneOff());
+			}
+		}
 		if (P2_Press) {
 			if(Input.GetKeyDown(KeyCode.Space)){
 				StartCoroutine(CameraTwoOff());
