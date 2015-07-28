@@ -29,7 +29,8 @@ public class s_Power : MonoBehaviour {
 		PowerOff_Right.SetActive(false);
 		CameraConeOne.SetActive(true);
 		CameraConeTwo.SetActive(true);
-
+		SpotlightConeOne.SetActive(true);
+		SpotlightConeTwo.SetActive(true);
 	}
 	
 	// Update is called once per frame
