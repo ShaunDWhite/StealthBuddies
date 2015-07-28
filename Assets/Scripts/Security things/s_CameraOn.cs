@@ -6,46 +6,31 @@ public class s_CameraOn : MonoBehaviour {
 	public bool IsOn = true;
 	public float alarmTime = 3;
 	public string player;
-
-
-	void Start(){
-
+	public s_GameManager gameManager;
+	
+		
+	// Use this for initialization
+	void Start () {
+		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
 	}
 
 
-	// Update is called once per frame
-	void Update () {
-
-	}
-
-
-
-	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.name == "PlayerOneTest"){
-			if(IsOn){
-//				player = "Player one";
-//				StartCoroutine(Alarm());
-				Debug.Log("p1 alarm");
+	void OnTriggerEnter2D(Collider2D col){					
+		if(col.gameObject.name == "PlayerOneTest"){				//if player one
+			if(IsOn){											// if turned on
+				Debug.Log("p1 alarm");							// alarm
 			}
-			else if(!IsOn){
-				Debug.Log("p1 no alarm");
+			else if(!IsOn){										// if turned off
+				Debug.Log("p1 no alarm");						// no alarm
 			}
 		}
-		else if(col.gameObject.name == "PlayerTwoTest"){
-			if(IsOn){
-//				player = "Player two";
-//				StartCoroutine(Alarm());
-				Debug.Log("p2 alarm");
+		else if(col.gameObject.name == "PlayerTwoTest"){		// if player 2
+			if(IsOn){											// if turned on
+				Debug.Log("p2 alarm");							// alarm
 			}
-			else if(!IsOn){
-				Debug.Log("p2 no alarm");
+			else if(!IsOn){										//if turned off
+				Debug.Log("p2 no alarm");						// no alarm
 			}
 		}
 	}
-
-	public IEnumerator Alarm(){
-		yield return new WaitForSeconds(alarmTime);
-		Debug.Log(player + " alarm");
-	}
-
 }
