@@ -6,11 +6,15 @@ public class s_GameManager : MonoBehaviour {
 	//We'll need to make these scripts as part of the 
 	//public s_PlayerOne playerOne;
 	//public s_PlayerTwo playerTwo;
-
-
+	
 
 	public bool isPlayerOneDetected;
 	public bool isPlayerTwoDetected;
+
+
+	public float MixTape = 250f;
+
+
 
 	//Just placeholders for where the score can be held. 
 	public float playerOneScore;
