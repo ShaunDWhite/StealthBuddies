@@ -5,7 +5,7 @@ using System.Collections;
 public class s_CameraOff : MonoBehaviour {
 
 	public s_CameraOn CameraOne, CameraTwo;
-	public float Timer = 5;
+	public float Timer = 1.5f;
 	public bool P1_Press = false, 
 				P2_Press = false;
 

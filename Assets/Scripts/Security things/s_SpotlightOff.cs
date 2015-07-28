@@ -4,7 +4,7 @@ using System.Collections;
 public class s_SpotlightOff : MonoBehaviour {
 
 	public s_SpotlightOn LightOne, LightTwo;
-	public float Timer = 5;
+	public float Timer = 1.5f;
 	public bool P2_Press = false;
 
 	void OnTriggerStay2D(Collider2D col){
