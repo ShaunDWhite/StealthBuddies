@@ -32,13 +32,13 @@ public class s_GameManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		
-		//Call the InitGame function to initialize the first level 
-		InitGame ();
+		//Call the InitGame function to initialize the first level when we decide what it is. :D Should be Main Menu
+		//InitGame ();
 	}
 
 	// Use this for initialization
 	void InitGame () {
-		Application.LoadLevel ("Test_Nic");
+		//Application.LoadLevel ("Test_Nic");
 		// Commented out because they don't work yet! //playerOne = GameObject.Find ("Player One").GetComponent<s_PlayerOne> ();
 		//playerTwo = GameObject.Find ("Player One").GetComponent<s_PlayerTwo> ();
 	}
