@@ -3,6 +3,22 @@ using System.Collections;
 
 public class s_Level3_Power : MonoBehaviour {
 
+	public GameObject	
+		CameraOne,
+		LightOne,
+		LightTwo,
+		LightThree,
+		LaserOne,
+		LaserTwo,
+		CameraCone,
+		LightOneCone,
+		LightTwoCone,
+		LightThreeCone;
+	public s_CameraOn C_One;
+	public s_SpotlightOn S_One, S_Two;
+
+
+
 	// Use this for initialization
 	void Start () {
 	
