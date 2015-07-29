@@ -104,15 +104,15 @@ public class AI_Behaviour : MonoBehaviour {
        {
            int tempIDX = waypointIDX;
 			//Nic tried to add its waypoint system to reset once it reaches the last point. ***********************************Look Here for Fuck Up***************************************
-           do
-           {
-				if(waypointIDX <= 3){
-               waypointIDX +=1;
-				} else if (waypointIDX > 3)
-				{
-					waypointIDX = 0;
-				}
-           }
+//           do
+//           {
+//				if(waypointIDX <= 3){
+//               waypointIDX +=1;
+//				} else if (waypointIDX > 3)
+//				{
+//					waypointIDX = 0;
+//				}
+//           }
            while (waypointIDX == tempIDX);
 		    currState = AIState.LOOK;
        }
