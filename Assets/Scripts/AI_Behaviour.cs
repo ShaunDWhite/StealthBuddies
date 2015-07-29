@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public class AI_Behaviour : MonoBehaviour {
 
+	//Link to the GameManager
+	public s_GameManager gameManager;
+
+
 	//The player
     public GameObject target;
 
@@ -41,6 +45,7 @@ public class AI_Behaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
         waypointIDX = 0;
 		currState = AIState.PATROL;
         transform.LookAt(waypoints[waypointIDX].transform.position);
@@ -107,15 +112,15 @@ public class AI_Behaviour : MonoBehaviour {
            do
            {
 
-
+				if (waypointIDX >= 3)
+				{
+					waypointIDX = 0;
+				}
 			//	for(int a = 0; a < 4; a++){
-					if(waypointIDX <= 3){
+				else if(waypointIDX <= 3){
                			waypointIDX +=1;
 					} 
-					else if (waypointIDX > 3)
-					{
-						waypointIDX = 0;
-					}
+					
 
 //					if(waypointIDX < 4){
 //						waypointIDX += 1;
@@ -155,4 +160,19 @@ public class AI_Behaviour : MonoBehaviour {
 	{
        this.transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, speed * Time.deltaTime);
 	}
+
+	void OnTriggerEnter2D(Collider2D Col)
+	{
+		if(Col.tag == "Player One")
+		{
+			gameManager.SendMessage("Detected");
+		}
+		else if(Col.tag == "Player Two")
+		{
+			gameManager.SendMessage("Detected");
+		}
+	}
+
+
+
 }
