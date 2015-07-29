@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class s_LoadLevelTwo : MonoBehaviour {
+public class s_LoadNextLevel : MonoBehaviour {
 
 	public bool One = false;
 	public bool Two = false;
 
 
-
+	void Start(){
+		One = false;
+		Two = false;
+	}
 
 
 	void OnTriggerEnter2D(Collider2D col){
@@ -30,12 +33,17 @@ public class s_LoadLevelTwo : MonoBehaviour {
 
 
 	void Update(){
-		LoadNextLevel();		
+		LoadNextLevel();	
 	}
 
 	void LoadNextLevel(){
 		if((One == true) && (Two == true)){
-			Application.LoadLevel("Level_2");
+			if(Application.loadedLevelName == "Level_1_Test"){
+				Application.LoadLevel("Level_2");
+			}
+			if(Application.loadedLevelName == "Level_2"){
+				Application.LoadLevel("Level_3");
+			}
 		}
 	}
 
