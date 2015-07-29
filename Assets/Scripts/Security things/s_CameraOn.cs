@@ -18,7 +18,7 @@ public class s_CameraOn : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){					
 		if(col.gameObject.name == "PlayerOneTest"){				//if player one
 			if(IsOn){											// if turned on
-				Debug.Log("p1 alarm");							// alarm
+				gameManager.Detected();
 			}
 			else if(!IsOn){										// if turned off
 				Debug.Log("p1 no alarm");						// no alarm
@@ -26,7 +26,7 @@ public class s_CameraOn : MonoBehaviour {
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){		// if player 2
 			if(IsOn){											// if turned on
-				Debug.Log("p2 alarm");							// alarm
+				gameManager.Detected();
 			}
 			else if(!IsOn){										//if turned off
 				Debug.Log("p2 no alarm");						// no alarm

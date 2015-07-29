@@ -51,4 +51,16 @@ public class s_GameManager : MonoBehaviour {
 	void Update () {
 	
 	}
+
+
+	public void Detected(){
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
+
+
+
+
+
+
 }
