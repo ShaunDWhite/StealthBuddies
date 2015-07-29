@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class s_Start : MonoBehaviour {
+public class s_PlayGame : MonoBehaviour {
 
-	public void Yay(){
-		Application.LoadLevel("Controlls");
+	public void Yup(){
+		Application.LoadLevel("Level_1_Test");
 	}
 }
