@@ -39,13 +39,14 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Users/New/UNI WORK UNITY/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Users/New/UNI WORK UNITY/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\AI_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Level Change\s_LoadNextLevel.cs" />
      <Compile Include="Assets\Scripts\Menus\s_PlayGame.cs" />
      <Compile Include="Assets\Scripts\Menus\s_ReturnToMainMenu.cs" />
@@ -73,7 +74,7 @@
      <Compile Include="Assets\Scripts\s_TriggerSpotlight.cs" />
      <Compile Include="Assets\Scripts\s_TriggerTemplate.cs" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/New/UNI WORK UNITY/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
