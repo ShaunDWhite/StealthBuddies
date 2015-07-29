@@ -20,16 +20,10 @@ public class s_CameraOn : MonoBehaviour {
 			if(IsOn){											// if turned on
 				gameManager.Detected();
 			}
-			else if(!IsOn){										// if turned off
-				Debug.Log("p1 no alarm");						// no alarm
-			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){		// if player 2
 			if(IsOn){											// if turned on
 				gameManager.Detected();
-			}
-			else if(!IsOn){										//if turned off
-				Debug.Log("p2 no alarm");						// no alarm
 			}
 		}
 	}

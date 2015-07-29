@@ -17,16 +17,10 @@ public class s_SpotlightOn : MonoBehaviour {
 			if(LightIsOn){										// if it's turned on
 				gameManager.Detected();
 			}
-			else if(!LightIsOn){								//If turned off
-				Debug.Log("p1 no alarm");						// no alarm
-			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){		//if player 2
 			if(LightIsOn){										//if its turned on			
 				gameManager.Detected();
-			}
-			else if(!LightIsOn){								// if turned off
-				Debug.Log("p2 no alarm");						// no alarm
 			}
 		}
 	}

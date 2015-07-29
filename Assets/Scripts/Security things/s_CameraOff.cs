@@ -39,11 +39,9 @@ public class s_CameraOff : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.name == "PlayerOneTest"){
-			Debug.Log("le button is pressed, timer starts");
 			P1_Press = true;
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
-			Debug.Log("le Camers 2 button is pressed, timer starts");
 			P2_Press = true;
 		}
 	}
