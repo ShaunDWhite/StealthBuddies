@@ -32,6 +32,15 @@ public class AI_Behaviour : MonoBehaviour {
     public float lookTimer;
 	private float timer;
 
+	float mAngle=0.0f;
+
+	[Range(0.1f,300.0f)]
+	public float turnSpeed=10.0f;
+
+	[Range(0.01f,2.0f)]
+	public float lookForwardTime=0.2f;
+
+	float mTurnVelocity=0.0f;
     //The various AI states
 	enum AIState
 	{
@@ -47,8 +56,12 @@ public class AI_Behaviour : MonoBehaviour {
 	{
 		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
         waypointIDX = 0;
-		currState = AIState.PATROL;
-        transform.LookAt(waypoints[waypointIDX].transform.position);
+		currState = AIState.LOOK;
+		Vector3 temp = waypoints[waypointIDX].transform.position - transform.position;
+		mAngle = Mathf.Atan2(-temp.x,temp.y)*Mathf.Rad2Deg;
+		transform.eulerAngles=new Vector3(0,0,mAngle);
+
+     //   transform.LookAt(waypoints[waypointIDX].transform.position,new Vector3(0,0,1));
 	}
 	
 	// Update is called once per frame
@@ -79,8 +92,9 @@ public class AI_Behaviour : MonoBehaviour {
        //Debug.Log(Vector3.Dot(Vector3.Normalize(this.transform.forward), Vector3.Normalize(target.transform.position - this.transform.position)));
 
 
+		Vector3 forward = new Vector3(-Mathf.Sin(mAngle*Mathf.Deg2Rad),Mathf.Cos(mAngle*Mathf.Deg2Rad),0);
 
-        if (Vector3.Dot(Vector3.Normalize(this.transform.forward), Vector3.Normalize(target.transform.position - this.transform.position)) > Mathf.Cos(scanFOV * Mathf.Deg2Rad) && (target.transform.position - this.transform.position).magnitude < dist)
+		if (Vector3.Dot(Vector3.Normalize(forward), Vector3.Normalize(target.transform.position - this.transform.position)) > Mathf.Cos(scanFOV * Mathf.Deg2Rad) && (target.transform.position - this.transform.position).magnitude < dist)
         {
             currState = AIState.CHASE;
         }
@@ -90,12 +104,23 @@ public class AI_Behaviour : MonoBehaviour {
         Vector3 rightHS = transform.forward * 100.0f;
 
         //Uses a euclidian vector the calculate the lhs and rhs and draws them
-		leftHS = new Vector3(leftHS.x * Mathf.Cos(scanFOV * Mathf.Deg2Rad) - leftHS.z * Mathf.Sin(scanFOV * Mathf.Deg2Rad), leftHS.x * Mathf.Sin(scanFOV * Mathf.Deg2Rad) + leftHS.z * Mathf.Cos(scanFOV * Mathf.Deg2Rad),0f);
-		rightHS = new Vector3(rightHS.x * Mathf.Cos(-scanFOV * Mathf.Deg2Rad) - rightHS.z * Mathf.Sin(-scanFOV * Mathf.Deg2Rad), rightHS.x * Mathf.Sin(-scanFOV * Mathf.Deg2Rad) + rightHS.z * Mathf.Cos(-scanFOV * Mathf.Deg2Rad),0f);
-        Debug.DrawLine(this.transform.position, this.transform.position + leftHS);
-        Debug.DrawLine(this.transform.position, this.transform.position + rightHS);
+		//leftHS = new Vector3(leftHS.x * Mathf.Cos(scanFOV * Mathf.Deg2Rad) - leftHS.y * Mathf.Sin(scanFOV * Mathf.Deg2Rad), leftHS.x * Mathf.Sin(scanFOV * Mathf.Deg2Rad) + leftHS.y * Mathf.Cos(scanFOV * Mathf.Deg2Rad),0f);
+		//rightHS = new Vector3(rightHS.x * Mathf.Cos(-scanFOV * Mathf.Deg2Rad) - rightHS.y * Mathf.Sin(-scanFOV * Mathf.Deg2Rad), rightHS.x * Mathf.Sin(-scanFOV * Mathf.Deg2Rad) + rightHS.y * Mathf.Cos(-scanFOV * Mathf.Deg2Rad),0f);
+		//
+		leftHS = new Vector3(-Mathf.Sin((mAngle-scanFOV)*Mathf.Deg2Rad),Mathf.Cos((mAngle-scanFOV)*Mathf.Deg2Rad),0);
+		rightHS = new Vector3(-Mathf.Sin((mAngle+scanFOV)*Mathf.Deg2Rad),Mathf.Cos((mAngle+scanFOV)*Mathf.Deg2Rad),0);
+		Debug.DrawLine(this.transform.position, this.transform.position + leftHS*3.0f,new Color(0.0f,1.0f,0.0f));
+		Debug.DrawLine(this.transform.position, this.transform.position + rightHS*3.0f,new Color(0.0f,1.0f,0.0f));
+		//Debug.DrawLine(transform.position, transform.position+forward*3.0f);
         //Debug.DrawLine(this.transform.position, target.transform.position, new Color(0.0f, 1.0f, 0.0f));
-
+//		Quaternion q = transform.rotation;
+///		q.x=0.0f;
+//		q.z=0.0f;
+//		float t = Mathf.Sqrt(q.y*q.y+q.w*q.w);
+//		q.y/=t;
+//		q.w/=t;
+//		transform.rotation = q;
+		transform.eulerAngles=new Vector3(0,0,mAngle);
 	}
 
     /// <summary>
@@ -104,7 +129,11 @@ public class AI_Behaviour : MonoBehaviour {
 	void OnPatrol()
 	{
        this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[waypointIDX].transform.position, speed * Time.deltaTime);
-       transform.LookAt(transform.position + Vector3.RotateTowards(transform.forward, waypoints[waypointIDX].transform.position - transform.position, 6.0f * Time.deltaTime, 0.0f));
+//		transform.LookAt(transform.position + Vector3.RotateTowards(transform.up, waypoints[waypointIDX].transform.position - transform.position, 6.0f * Time.deltaTime, 0.0f),new Vector3(0,0,1));
+		Vector3 temp = waypoints[waypointIDX].transform.position - transform.position;
+		float desiredAngle = Mathf.Atan2(-temp.x,temp.y)*Mathf.Rad2Deg;
+		mAngle = Mathf.SmoothDampAngle(mAngle,desiredAngle,ref mTurnVelocity,lookForwardTime);
+
        if ((this.transform.position - waypoints[waypointIDX].transform.position).magnitude < 1.0f)
        {
            int tempIDX = waypointIDX;
@@ -144,7 +173,8 @@ public class AI_Behaviour : MonoBehaviour {
 	{
 		if(timer < lookTimer)
 		{
-            transform.Rotate(0, (Time.deltaTime * 6.28f) * Mathf.Rad2Deg, 0);
+    //        transform.Rotate(0, (Time.deltaTime * 6.28f) * Mathf.Rad2Deg,0);
+			mAngle+=turnSpeed*Time.deltaTime;//Time.deltaTime*6.28f;
 		}
 		else if(timer >= lookTimer)
 		{
@@ -159,6 +189,9 @@ public class AI_Behaviour : MonoBehaviour {
 	void OnChase()
 	{
        this.transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, speed * Time.deltaTime);
+		Vector3 temp = target.transform.position - transform.position;
+		float desiredAngle = Mathf.Atan2(-temp.x,temp.y)*Mathf.Rad2Deg;
+		mAngle = Mathf.SmoothDampAngle(mAngle,desiredAngle,ref mTurnVelocity,lookForwardTime);
 	}
 
 	void OnTriggerEnter2D(Collider2D Col)
