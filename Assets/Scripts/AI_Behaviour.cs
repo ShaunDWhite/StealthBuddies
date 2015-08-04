@@ -111,8 +111,8 @@ public class AI_Behaviour : MonoBehaviour {
 		//
 		leftHS = new Vector3(-Mathf.Sin((mAngle-scanFOV)*Mathf.Deg2Rad),Mathf.Cos((mAngle-scanFOV)*Mathf.Deg2Rad),0);
 		rightHS = new Vector3(-Mathf.Sin((mAngle+scanFOV)*Mathf.Deg2Rad),Mathf.Cos((mAngle+scanFOV)*Mathf.Deg2Rad),0);
-		Debug.DrawLine(this.transform.position, this.transform.position + leftHS*3.0f,new Color(0.0f,1.0f,0.0f));
-		Debug.DrawLine(this.transform.position, this.transform.position + rightHS*3.0f,new Color(0.0f,1.0f,0.0f));
+		Debug.DrawLine(this.transform.position, this.transform.position + leftHS*dist,new Color(0.0f,1.0f,0.0f));
+		Debug.DrawLine(this.transform.position, this.transform.position + rightHS*dist,new Color(0.0f,1.0f,0.0f));
 		//Debug.DrawLine(transform.position, transform.position+forward*3.0f);
         //Debug.DrawLine(this.transform.position, target.transform.position, new Color(0.0f, 1.0f, 0.0f));
 //		Quaternion q = transform.rotation;
