@@ -1,0 +1,304 @@
+fileFormatVersion: 2
+guid: ccd0597f394df984d9cc41069d54f417
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SPRITESHEET_Guard_Jon_0
+    21300002: SPRITESHEET_Guard_Jon_1
+    21300004: SPRITESHEET_Guard_Jon_2
+    21300006: SPRITESHEET_Guard_Jon_3
+    21300008: SPRITESHEET_Guard_Jon_4
+    21300010: SPRITESHEET_Guard_Jon_5
+    21300012: SPRITESHEET_Guard_Jon_6
+    21300014: SPRITESHEET_Guard_Jon_7
+    21300016: SPRITESHEET_Guard_Jon_8
+    21300018: SPRITESHEET_Guard_Jon_9
+    21300020: SPRITESHEET_Guard_Jon_10
+    21300022: SPRITESHEET_Guard_Jon_11
+    21300024: SPRITESHEET_Guard_Jon_12
+    21300026: SPRITESHEET_Guard_Jon_13
+    21300028: SPRITESHEET_Guard_Jon_14
+    21300030: SPRITESHEET_Guard_Jon_15
+    21300032: SPRITESHEET_Guard_Jon_16
+    21300034: SPRITESHEET_Guard_Jon_17
+    21300036: SPRITESHEET_Guard_Jon_18
+    21300038: SPRITESHEET_Guard_Jon_19
+    21300040: SPRITESHEET_Guard_Jon_20
+    21300042: SPRITESHEET_Guard_Jon_21
+    21300044: SPRITESHEET_Guard_Jon_22
+    21300046: SPRITESHEET_Guard_Jon_23
+    21300048: SPRITESHEET_Guard_Jon_24
+    21300050: SPRITESHEET_Guard_Jon_25
+    21300052: SPRITESHEET_Guard_Jon_26
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SPRITESHEET_Guard_Jon_0
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 917
+        width: 190
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_1
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 917
+        width: 190
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 781
+        width: 190
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 781
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 781
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_5
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 781
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_6
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 771
+        width: 176
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 635
+        width: 176
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_8
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 635
+        width: 176
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 645
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_10
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 645
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_11
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 645
+        width: 185
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 509
+        width: 190
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_13
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 509
+        width: 191
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_14
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 509
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_15
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 509
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 373
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_17
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 363
+        width: 176
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_18
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 363
+        width: 176
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_19
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 363
+        width: 176
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_20
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 373
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 237
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SPRITESHEET_Guard_Jon_22
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 237
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -6,7 +6,8 @@ public class AI_Behaviour : MonoBehaviour {
 
 	//Link to the GameManager
 	public s_GameManager gameManager;
-
+	//Link to the animator
+	public Animator anim;
 
 	//The player
     public GameObject target;
@@ -55,6 +56,7 @@ public class AI_Behaviour : MonoBehaviour {
 	void Start ()
 	{
 		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
+		anim = this.GetComponent<Animator>();
         waypointIDX = 0;
 		currState = AIState.LOOK;
 		Vector3 temp = waypoints[waypointIDX].transform.position - transform.position;
@@ -128,13 +130,14 @@ public class AI_Behaviour : MonoBehaviour {
     /// </summary>
 	void OnPatrol()
 	{
+		anim.SetInteger ("AnimNo", 1);
        this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[waypointIDX].transform.position, speed * Time.deltaTime);
 //		transform.LookAt(transform.position + Vector3.RotateTowards(transform.up, waypoints[waypointIDX].transform.position - transform.position, 6.0f * Time.deltaTime, 0.0f),new Vector3(0,0,1));
 		Vector3 temp = waypoints[waypointIDX].transform.position - transform.position;
 		float desiredAngle = Mathf.Atan2(-temp.x,temp.y)*Mathf.Rad2Deg;
 		mAngle = Mathf.SmoothDampAngle(mAngle,desiredAngle,ref mTurnVelocity,lookForwardTime);
 
-       if ((this.transform.position - waypoints[waypointIDX].transform.position).magnitude < 1.0f)
+       if ((this.transform.position - waypoints[waypointIDX].transform.position).magnitude < 0.5f)
        {
            int tempIDX = waypointIDX;
 			//Nic tried to add its waypoint system to reset once it reaches the last point. ***********************************Look Here for Fuck Up***************************************
@@ -171,6 +174,7 @@ public class AI_Behaviour : MonoBehaviour {
     /// </summary>
 	void OnLook()
 	{
+		anim.SetInteger ("AnimNo", 0);
 		if(timer < lookTimer)
 		{
     //        transform.Rotate(0, (Time.deltaTime * 6.28f) * Mathf.Rad2Deg,0);
@@ -188,6 +192,7 @@ public class AI_Behaviour : MonoBehaviour {
     /// </summary>
 	void OnChase()
 	{
+		anim.SetInteger ("AnimNo", 1);
        this.transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, speed * Time.deltaTime);
 		Vector3 temp = target.transform.position - transform.position;
 		float desiredAngle = Mathf.Atan2(-temp.x,temp.y)*Mathf.Rad2Deg;
