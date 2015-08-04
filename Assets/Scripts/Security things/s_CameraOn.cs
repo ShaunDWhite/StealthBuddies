@@ -27,4 +27,18 @@ public class s_CameraOn : MonoBehaviour {
 			}
 		}
 	}
+
+
+	void OnTriggerStay2D(Collider2D col){
+		if(col.gameObject.name == "PlayerTwoTest"){
+			if(IsOn){
+				gameManager.Detected();
+			}
+		}
+		else if(col.gameObject.name == "PlayerOneTest"){
+			if(IsOn){
+				gameManager.Detected();
+			}
+		}
+	}
 }

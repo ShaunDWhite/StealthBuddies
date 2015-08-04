@@ -24,4 +24,17 @@ public class s_SpotlightOn : MonoBehaviour {
 			}
 		}
 	}
+
+	void OnTriggerStay2D(Collider2D col){
+		if(col.gameObject.name == "PlayerTwoTest"){
+			if(LightIsOn){
+				gameManager.Detected();
+			}
+		}
+		else if(col.gameObject.name == "PlayerOneTest"){
+			if(LightIsOn){
+				gameManager.Detected();
+			}
+		}
+	}
 }
