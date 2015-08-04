@@ -61,7 +61,6 @@
      <Compile Include="Assets\Scripts\Security things\s_Power.cs" />
      <Compile Include="Assets\Scripts\Security things\s_SpotlightOff.cs" />
      <Compile Include="Assets\Scripts\Security things\s_SpotlightOn.cs" />
-     <Compile Include="Assets\Scripts\s_FOV2D.cs" />
      <Compile Include="Assets\Scripts\s_GameManager.cs" />
      <Compile Include="Assets\Scripts\s_GuardPatrol.cs" />
      <Compile Include="Assets\Scripts\s_Loader.cs" />
