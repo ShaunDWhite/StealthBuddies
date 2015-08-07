@@ -3,8 +3,15 @@ using System.Collections;
 
 public class s_Level4Power : MonoBehaviour {
 
-	public GameObject L1, L2, L3_1, L3_2, L4;
-	public s_LaserOn L_One, L_Two, L_Three_One, L_Three_Two, L_Four;
+	public GameObject L1, L2, L3_1, L3_2, L4, C_1, C_2;
+	public s_LaserOn 
+		L_One, 
+		L_Two, 
+		L_Three_One, 
+		L_Three_Two, 
+		L_Four;
+
+	public s_CameraOn C1, C2;
 
 
 	// Use this for initialization
@@ -14,6 +21,8 @@ public class s_Level4Power : MonoBehaviour {
 		L3_1.SetActive(true);
 		L3_2.SetActive(true);
 		L4.SetActive(true);
+		C_1.SetActive(true);
+		C_2.SetActive(true);
 	}
 	
 	// Update is called once per frame
@@ -21,9 +30,21 @@ public class s_Level4Power : MonoBehaviour {
 		OneHasPower();
 		TwoHasPower();
 		ThreeHasPower();
-		FourHasPower();	
+		FourHasPower();
+		CameraPower();
 	}
 
+
+	public void CameraPower(){
+		if((C1.IsOn) && (C2.IsOn)){
+			C_1.SetActive(true);
+			C_2.SetActive(true);
+		}
+		if((!C1.IsOn) && (!C2.IsOn)){
+			C_1.SetActive(false);
+			C_2.SetActive(false);
+		}
+	}
 
 	public void OneHasPower(){
 		if(L_One.IsTurnedOn){

@@ -32,7 +32,13 @@ public class s_CameraOff : MonoBehaviour {
 		}
 		if (P2_Press) {
 			if(Input.GetKeyDown(KeyCode.Space)){
+				if(Application.loadedLevelName == "Level_4"){
+					StartCoroutine(CameraOneOff());
+					StartCoroutine(CameraTwoOff());
+				}
+				else {
 				StartCoroutine(CameraTwoOff());
+				}
 			}
 		}
 	}

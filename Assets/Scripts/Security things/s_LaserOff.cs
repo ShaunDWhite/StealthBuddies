@@ -50,6 +50,10 @@ public class s_LaserOff : MonoBehaviour {
 			else if(gameObject.name == "Laser_Off_Button_3"){
 				L4_3 = true;
 			}
+			else if(gameObject.name == "Laser_Off_Button_BackUp"){
+				L4_1 = true;
+			}
+
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
 
@@ -100,6 +104,9 @@ public class s_LaserOff : MonoBehaviour {
 			}
 			else if(gameObject.name == "Laser_Off_Button_3"){
 				L4_3 = false;
+			}
+			else if(gameObject.name == "Laser_Off_Button_BackUp"){
+				L4_1 = false;
 			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
@@ -166,6 +173,9 @@ public class s_LaserOff : MonoBehaviour {
 
 		if(L4_1){
 			if(Input.GetKeyDown(KeyCode.Space)){
+				StartCoroutine(LaserOneOff());
+			}
+			else if(Input.GetButtonDown("A")){
 				StartCoroutine(LaserOneOff());
 			}
 		}
