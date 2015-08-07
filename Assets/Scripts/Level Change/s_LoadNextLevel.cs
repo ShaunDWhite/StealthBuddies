@@ -45,7 +45,13 @@ public class s_LoadNextLevel : MonoBehaviour {
 				Application.LoadLevel("Level_3");
 			}
 			if(Application.loadedLevelName == "Level_3"){
-				Application.LoadLevel("EndGame");
+				Application.LoadLevel("Level_4");
+			}
+			if(Application.loadedLevelName == "Level_4"){
+				Application.LoadLevel("Level_5");
+			}
+			if(Application.loadedLevelName == "Level_5"){
+				Application.LoadLevel("FinalLevel");
 			}
 		}
 	}
