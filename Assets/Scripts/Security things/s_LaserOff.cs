@@ -3,12 +3,12 @@ using System.Collections;
 
 public class s_LaserOff : MonoBehaviour {
 
-	public s_LaserOn LaserOne, LaserTwo, LaserThree, LaserFour;
-	public float timer = 5;
+	public s_LaserOn LaserOne, LaserTwo, LaserThree, LaserFour, LaserThree_2;
+	public float timer = 3;
 	public bool L1, L2, L3, L4, LvL3;
 
 	//level 4 stuff
-	public bool L3_2;
+	public bool L4_1, L4_2, L4_4, L4_3;
 
 
 	void Start(){
@@ -22,8 +22,9 @@ public class s_LaserOff : MonoBehaviour {
 		LvL3 = false;
 
 		// Level 4
-
-		L3_2 = false;
+		L4_1 = false;	
+		L4_3 = false;
+		L4_2 = false;
 
 	}
 
@@ -43,11 +44,11 @@ public class s_LaserOff : MonoBehaviour {
 
 			//Level 4
 
-			else if(col.gameObject.name == "Laser_Off_Button_2"){
-				L2 = true;
+			else if(gameObject.name == "Laser_Off_Button_2"){
+				L4_2 = true;
 			}
-			else if(col.gameObject.name == "Laser_Off_Button_4"){
-				L4 = true;
+			else if(gameObject.name == "Laser_Off_Button_3"){
+				L4_3 = true;
 			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
@@ -67,15 +68,13 @@ public class s_LaserOff : MonoBehaviour {
 
 			// Level 4
 
-			else if(col.gameObject.name == "Laser_Off_Button_1"){
-				L1 = true;
+			else if(gameObject.name == "Laser_Off_Button_1"){
+				L4_1 = true;
 			}
-			else if(col.gameObject.name == "Laser_Off_Button_3_1"){
-				L3 = true;
+			else if(gameObject.name == "Laser_Off_Button_4"){
+				L4_4 = true;
 			}
-			else if(col.gameObject.name == "Laser_Off_Button_3_2"){
-				L3_2 = true;
-			}
+
 
 
 		}
@@ -96,11 +95,11 @@ public class s_LaserOff : MonoBehaviour {
 
 			//Level 4
 			
-			else if(col.gameObject.name == "Laser_Off_Button_2"){
-				L2 = true;
+			else if(gameObject.name == "Laser_Off_Button_2"){
+				L4_2 = false;
 			}
-			else if(col.gameObject.name == "Laser_Off_Button_4"){
-				L4 = true;
+			else if(gameObject.name == "Laser_Off_Button_3"){
+				L4_3 = false;
 			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
@@ -120,20 +119,22 @@ public class s_LaserOff : MonoBehaviour {
 
 			// Level 4
 			
-			else if(col.gameObject.name == "Laser_Off_Button_1"){
-				L1 = true;
+			else if(gameObject.name == "Laser_Off_Button_1"){
+				L4_1 = false;
 			}
-			else if(col.gameObject.name == "Laser_Off_Button_3_1"){
-				L3 = true;
+			else if(gameObject.name == "Laser_Off_Button_3_1"){
+				L4_4 = false;
 			}
-			else if(col.gameObject.name == "Laser_Off_Button_3_2"){
-				L3_2 = true;
-			}
+
 		}
 	}
 
 
 	void Update(){
+
+		//Level 1 - 3
+
+
 		if(L1){
 			if(Input.GetKeyDown(KeyCode.Space)){
 				StartCoroutine(LaserOneOff ());
@@ -161,6 +162,31 @@ public class s_LaserOff : MonoBehaviour {
 			}
 		}
 
+		// Level 4	
+
+		if(L4_1){
+			if(Input.GetKeyDown(KeyCode.Space)){
+				StartCoroutine(LaserOneOff());
+			}
+		}
+		if(L4_2){
+			if(Input.GetButtonDown("A")){
+				StartCoroutine(LaserTwoOff());
+			}
+		}
+		if(L4_4){
+			if(Input.GetKeyDown(KeyCode.Space)){
+				StartCoroutine(LaserFourOff());		
+			}
+		}
+
+
+		if(L4_3){
+			if(Input.GetButtonDown("A")){
+				StartCoroutine(TwinLasers());
+				StartCoroutine(LaserThreeOff());
+			}
+		}
 	}
 
 
@@ -187,7 +213,10 @@ public class s_LaserOff : MonoBehaviour {
 		LaserFour.IsTurnedOn = true;
 	}
 
-
-
+	public IEnumerator TwinLasers(){
+		LaserThree_2.IsTurnedOn = false;			
+		yield return new WaitForSeconds(timer);
+		LaserThree_2.IsTurnedOn = true;
+	}
 
 }
