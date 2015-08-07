@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Security things\s_LaserOn.cs" />
      <Compile Include="Assets\Scripts\Security things\s_LaserPower.cs" />
      <Compile Include="Assets\Scripts\Security things\s_Level3_Power.cs" />
+     <Compile Include="Assets\Scripts\Security things\s_Level4Power.cs" />
      <Compile Include="Assets\Scripts\Security things\s_Power.cs" />
      <Compile Include="Assets\Scripts\Security things\s_SpotlightOff.cs" />
      <Compile Include="Assets\Scripts\Security things\s_SpotlightOn.cs" />
