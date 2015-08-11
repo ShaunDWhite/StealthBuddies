@@ -3,6 +3,7 @@ using System.Collections;
 
 public class s_LaserOff : MonoBehaviour {
 
+	public s_GameManager gameManager;
 	public s_LaserOn LaserOne, LaserTwo, LaserThree, LaserFour, LaserThree_2;
 	public float timer = 3;
 	public bool L1, L2, L3, L4, LvL3;
@@ -10,8 +11,14 @@ public class s_LaserOff : MonoBehaviour {
 	//level 4 stuff
 	public bool L4_1, L4_2, L4_4, L4_3;
 
+	// Level 5
+	public bool L5_1,  L5_2,  L5_3,  L5_4;
+
 
 	void Start(){
+
+		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
+
 
 		// Level 1 - 3
 
@@ -25,6 +32,11 @@ public class s_LaserOff : MonoBehaviour {
 		L4_1 = false;	
 		L4_3 = false;
 		L4_2 = false;
+
+		L5_1 = false;	  
+		L5_2 = false;	 
+		L5_3 = false;	
+		L5_4 = false;	
 
 	}
 
@@ -54,6 +66,16 @@ public class s_LaserOff : MonoBehaviour {
 				L4_1 = true;
 			}
 
+			//Level 5
+			else if(gameObject.name == "Laser_Off_Button_P1_1"){
+				L5_1 = true;
+			}
+			else if(gameObject.name == "Laser_Off_Button_P1_2"){
+				L5_2 = true;
+			}
+
+
+
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
 
@@ -79,7 +101,13 @@ public class s_LaserOff : MonoBehaviour {
 				L4_4 = true;
 			}
 
-
+			//Level 5
+			else if(gameObject.name == "Laser_Off_Button_P2_1"){
+				L5_3 = true;
+			}
+			else if(gameObject.name == "Laser_Off_Button_P2_2"){
+				L5_4 = true;
+			}
 
 		}
 	}
@@ -108,6 +136,14 @@ public class s_LaserOff : MonoBehaviour {
 			else if(gameObject.name == "Laser_Off_Button_BackUp"){
 				L4_1 = false;
 			}
+
+			//Level 5
+			else if(gameObject.name == "Laser_Off_Button_P1_1"){
+				L5_1 = false;
+			}
+			else if(gameObject.name == "Laser_Off_Button_P1_2"){
+				L5_2 = false;
+			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
 
@@ -133,6 +169,13 @@ public class s_LaserOff : MonoBehaviour {
 				L4_4 = false;
 			}
 
+			//Level 5
+			else if(gameObject.name == "Laser_Off_Button_P2_1"){
+				L5_3 = false;
+			}
+			else if(gameObject.name == "Laser_Off_Button_P2_2"){
+				L5_4 = false;
+			}
 		}
 	}
 
@@ -197,6 +240,36 @@ public class s_LaserOff : MonoBehaviour {
 				StartCoroutine(LaserThreeOff());
 			}
 		}
+
+		// Level 5
+		if (L5_1) {	
+			if(Input.GetButtonDown("A")){
+				StartCoroutine(LaserOneOff());
+				// DHASDVFSJDGDDLSHDJSDBHJSDSDGSDJSBDHJGSDKDLSDHSDKJDSH
+			}
+		}
+
+		if (L5_2) { 
+			if(Input.GetButtonDown("A")){
+				StartCoroutine(LaserTwoOff());
+			}
+		}
+
+		if (L5_3) { 
+			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
+				StartCoroutine(LaserTwoOff());
+				// DHASDVFSJDGDDLSHDJSDBHJSDSDGSDJSBDHJGSDKDLSDHSDKJDSH
+			}
+		}
+
+		if (L5_4) { 
+			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
+				StartCoroutine(LaserOneOff());
+
+			}
+		}
+
+
 	}
 
 
