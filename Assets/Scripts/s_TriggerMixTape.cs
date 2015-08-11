@@ -24,11 +24,17 @@ public class s_TriggerMixTape : MonoBehaviour {
 		if (col.tag == "Player One") {
 			print ("PLAYER ONE HAS THE HOLY GRAIL");
 			gameManager.playerOneHolyGrail = true;
+			gameManager.save = true;
+			gameManager.grab = false;
 			Destroy(gameObject);
+		
 		} else if (col.tag == "Player Two") {
 			print ("PLAYER TWO HAS THE HOLY GRAIL");
 			gameManager.playerTwoHolyGrail = true;
+			gameManager.save = true;
+			gameManager.grab = false;
 			Destroy(gameObject);
+
 		}
 	}
 	

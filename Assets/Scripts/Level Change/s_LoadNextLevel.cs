@@ -5,11 +5,15 @@ public class s_LoadNextLevel : MonoBehaviour {
 
 	public bool One = false;
 	public bool Two = false;
+	public s_GameManager gameManager;
 
 
 	void Start(){
 		One = false;
 		Two = false;
+		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
+
+
 	}
 
 
@@ -50,9 +54,9 @@ public class s_LoadNextLevel : MonoBehaviour {
 			if(Application.loadedLevelName == "Level_4"){
 				Application.LoadLevel("Level_5");
 			}
-			if(Application.loadedLevelName == "Level_5"){
-				Application.LoadLevel("FinalLevel");
-			}
+		//	if(Application.loadedLevelName == "Level_5"){
+		//		gameManager.who = true;
+		//	}
 		}
 	}
 

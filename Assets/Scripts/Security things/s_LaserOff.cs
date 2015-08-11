@@ -245,7 +245,8 @@ public class s_LaserOff : MonoBehaviour {
 		if (L5_1) {	
 			if(Input.GetButtonDown("A")){
 				StartCoroutine(LaserOneOff());
-				// DHASDVFSJDGDDLSHDJSDBHJSDSDGSDJSBDHJGSDKDLSDHSDKJDSH
+				// Set the text in the game manager to appear
+				gameManager.grab = true;
 			}
 		}
 
@@ -258,7 +259,8 @@ public class s_LaserOff : MonoBehaviour {
 		if (L5_3) { 
 			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
 				StartCoroutine(LaserTwoOff());
-				// DHASDVFSJDGDDLSHDJSDBHJSDSDGSDJSBDHJGSDKDLSDHSDKJDSH
+				// Set the text in the game manager to appear
+				gameManager.grab = true;
 			}
 		}
 
