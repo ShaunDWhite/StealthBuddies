@@ -19,12 +19,16 @@ public class s_TriggerMixTape : MonoBehaviour {
 		
 	}
 	
-	void OnTriggerEnter(Collider col)
+	void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.tag == "Player One") {
-			print ("Shiet");
+			print ("PLAYER ONE HAS THE HOLY GRAIL");
+			gameManager.playerOneHolyGrail = true;
+			Destroy(gameObject);
 		} else if (col.tag == "Player Two") {
-			print ("shiet again");
+			print ("PLAYER TWO HAS THE HOLY GRAIL");
+			gameManager.playerTwoHolyGrail = true;
+			Destroy(gameObject);
 		}
 	}
 	

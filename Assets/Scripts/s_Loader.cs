@@ -8,9 +8,9 @@ public class s_Loader : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		
-//		if (s_GameManager.instance == null)
-//		{
-//			Instantiate (gameManager);
-//		}		
+		if (s_GameManager.instance == null)
+		{
+			Instantiate (gameManager);
+	}		
 	}	
 }
