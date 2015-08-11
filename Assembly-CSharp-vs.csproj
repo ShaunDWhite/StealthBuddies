@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\s_GuardPatrol.cs" />
      <Compile Include="Assets\Scripts\s_Loader.cs" />
      <Compile Include="Assets\Scripts\s_ObtainSpeaker.cs" />
+     <Compile Include="Assets\Scripts\s_OneLoadEnd.cs" />
      <Compile Include="Assets\Scripts\s_PlayerOneMovement.cs" />
      <Compile Include="Assets\Scripts\s_PlayerTwoMovement.cs" />
      <Compile Include="Assets\Scripts\s_TriggerCamera.cs" />

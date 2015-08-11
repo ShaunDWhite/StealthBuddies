@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class s_TriggerTemplate : MonoBehaviour {
+public class s_OneLoadEnd : MonoBehaviour {
 
-	//Copy and paste this into a new script for use on other objects. 
-
-	public s_GameManager gameManager;
 	public bool One, Two;
-
+	public s_GameManager gameManager;
 
 
 	// Use this for initialization
@@ -20,7 +17,6 @@ public class s_TriggerTemplate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		LoadEnd ();
-	
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
@@ -40,27 +36,12 @@ public class s_TriggerTemplate : MonoBehaviour {
 			Two = false;
 		}
 	}
-
+	
 	void LoadEnd(){
-		if ((One == true) && (Two == true)) {
-			// Load End Scene for both players :D
-		}
+		if (One == true) {
+						// Load End Scene for player one
+				} else if (Two == true) {
+					//load end scene for player two. 
+				}
 	}
-
-
-
-
-
-//	void OnTriggerEnter(Collider col)
-//	{
-//		if (col.tag == "Player One") {
-//			print ("Shiet");
-//		} else if (col.tag == "Player Two") {
-//			print ("shiet again");
-//		}
-//	}
-
-
-
-
 }

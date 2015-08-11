@@ -23,6 +23,10 @@ public class s_GameManager : MonoBehaviour {
 	public GameObject saveText;
 	public GameObject whoText;
 
+	public bool EndOne = false;
+	public bool EndTwo = false;
+	public bool	EndBoth = false;
+
 	//Awake is always called before any Start functions
 	void Awake()
 	{
