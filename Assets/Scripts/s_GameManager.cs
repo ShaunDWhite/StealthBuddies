@@ -44,37 +44,53 @@ public class s_GameManager : MonoBehaviour {
 	}
 
 
+	void Start(){
+//		if (Application.loadedLevelName == "Level_5") {
+//			grabText = GameObject.Find ("Grab");
+//			saveText = GameObject.Find ("Save");
+//			whoText = GameObject.Find ("Who");
+//		}
+	}
+
+
 
 	
 	// Update is called once per frame
 	void Update () {
-			if (grab == true) 
-				{
-			grabText.SetActive (true);
-			saveText.SetActive (false);	
-			whoText.SetActive (false);	
-			save = false;
-			who = false;
-				}
-		if (save == true) 
-		{
-			saveText.SetActive (true);
-			grabText.SetActive (false);	
-			whoText.SetActive (false);
-			grab = false;
-			who = false;
-		}
-		if (who == true) 
-		{
-			whoText.SetActive (true);
-			saveText.SetActive (false);	
-			grabText.SetActive (false);
-			grab = false;
-			save = false;
-		}
-	
-	}
 
+				if (Application.loadedLevelName == "Level_5") {
+					grabText = GameObject.Find ("Grab");
+					saveText = GameObject.Find ("Save");
+					whoText = GameObject.Find ("Who");
+				}
+				if (grab == true) {
+						grabText.SetActive (true);
+						saveText.SetActive (false);	
+						whoText.SetActive (false);	
+						save = false;
+						who = false;
+				}
+				if (save == true) {
+						saveText.SetActive (true);
+						grabText.SetActive (false);	
+						whoText.SetActive (false);
+						grab = false;
+						who = false;
+				}
+				if (who == true) {
+						whoText.SetActive (true);
+						saveText.SetActive (false);	
+						grabText.SetActive (false);
+						grab = false;
+						save = false;
+				}
+//				if (Application.loadedLevelName == "Level_5") {
+//						grabText = GameObject.Find ("Grab");
+//						saveText = GameObject.Find ("Save");
+//						whoText = GameObject.Find ("Who");
+//				}
+	
+		}
 
 
 	public void Detected(){
