@@ -12,13 +12,12 @@ public class s_GameManager : MonoBehaviour {
 	public bool isPlayerTwoDetected;
 
 
-	public float MixTape = 250f;
 
 
 
 	//Just placeholders for where the score can be held. 
-	public float playerOneScore;
-	public float playerTwoScore;
+	public bool playerOneHolyGrail;
+	public bool playerTwoHolyGrail;
 	//Awake is always called before any Start functions
 	void Awake()
 	{
