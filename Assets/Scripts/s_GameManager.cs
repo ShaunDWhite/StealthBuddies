@@ -11,13 +11,18 @@ public class s_GameManager : MonoBehaviour {
 	public bool isPlayerOneDetected;
 	public bool isPlayerTwoDetected;
 
-
-
-
-
-	//Just placeholders for where the score can be held. 
+	//Final Level Bool to decide who has the grail. 
 	public bool playerOneHolyGrail;
 	public bool playerTwoHolyGrail;
+
+	public bool grab;
+	public bool save;
+	public bool who;
+
+	public GameObject grabText;
+	public GameObject saveText;
+	public GameObject whoText;
+
 	//Awake is always called before any Start functions
 	void Awake()
 	{
@@ -35,21 +40,35 @@ public class s_GameManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		
-		//Call the InitGame function to initialize the first level when we decide what it is. :D Should be Main Menu
-		//InitGame ();
+	
 	}
 
-	// Use this for initialization
-	void InitGame () {
-		//Application.LoadLevel ("Test_Nic");
-		// Commented out because they don't work yet! //playerOne = GameObject.Find ("Player One").GetComponent<s_PlayerOne> ();
-		//playerTwo = GameObject.Find ("Player One").GetComponent<s_PlayerTwo> ();
-	}
+
+
 	
 	// Update is called once per frame
 	void Update () {
+			if (grab == true) 
+				{
+			grabText.SetActive (true);
+			saveText.SetActive (false);	
+			whoText.SetActive (false);	
+				}
+		if (save == true) 
+		{
+			saveText.SetActive (true);
+			grabText.SetActive (false);	
+			whoText.SetActive (false);
+		}
+		if (who == true) 
+		{
+			whoText.SetActive (true);
+			saveText.SetActive (false);	
+			grabText.SetActive (false);
+		}
 	
 	}
+
 
 
 	public void Detected(){
@@ -57,7 +76,10 @@ public class s_GameManager : MonoBehaviour {
 	}
 
 
+	public void TextPopUp()
+	{
 
+	}
 
 
 
