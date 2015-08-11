@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Security things\s_LaserOff.cs">
     <Files>
-      <File FileName="Assets\Scripts\Security things\s_LaserOff.cs" Line="100" Column="13" />
+      <File FileName="Assets\Scripts\Security things\s_LaserOff.cs" Line="261" Column="60" />
+      <File FileName="Assets\Scripts\Security things\s_LaserOn.cs" Line="13" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

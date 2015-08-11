@@ -3,6 +3,7 @@ using System.Collections;
 
 public class s_LaserOff : MonoBehaviour {
 
+	public s_GameManager gameManager;
 	public s_LaserOn LaserOne, LaserTwo, LaserThree, LaserFour, LaserThree_2;
 	public float timer = 3;
 	public bool L1, L2, L3, L4, LvL3;
@@ -15,6 +16,9 @@ public class s_LaserOff : MonoBehaviour {
 
 
 	void Start(){
+
+		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
+
 
 		// Level 1 - 3
 
@@ -238,25 +242,27 @@ public class s_LaserOff : MonoBehaviour {
 		}
 
 		// Level 5
-		if (L5_1) {	// bottom
+		if (L5_1) {	
 			if(Input.GetButtonDown("A")){
 				StartCoroutine(LaserOneOff());
+				// DHASDVFSJDGDDLSHDJSDBHJSDSDGSDJSBDHJGSDKDLSDHSDKJDSH
 			}
 		}
 
-		if (L5_2) { //top
+		if (L5_2) { 
 			if(Input.GetButtonDown("A")){
 				StartCoroutine(LaserTwoOff());
 			}
 		}
 
-		if (L5_3) { //top
+		if (L5_3) { 
 			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
 				StartCoroutine(LaserTwoOff());
+				// DHASDVFSJDGDDLSHDJSDBHJSDSDGSDJSBDHJGSDKDLSDHSDKJDSH
 			}
 		}
 
-		if (L5_4) { //bottom
+		if (L5_4) { 
 			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
 				StartCoroutine(LaserOneOff());
 
