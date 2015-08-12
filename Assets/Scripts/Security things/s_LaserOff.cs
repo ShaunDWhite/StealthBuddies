@@ -245,10 +245,11 @@ public class s_LaserOff : MonoBehaviour {
 
 		// Level 5
 		if (L5_1) {	
-			if(Input.GetButtonDown("A")){
+			if((Input.GetButtonDown("A")) && (gameManager.L5Laser == true)){
 				StartCoroutine(LaserOneOff());
 				// Set the text in the game manager to appear
 				gameManager.grab = true;
+				gameManager.L5Laser = false;
 			}
 		}
 
@@ -260,10 +261,11 @@ public class s_LaserOff : MonoBehaviour {
 		}
 
 		if (L5_3) { 
-			if(Input.GetKeyDown(KeyCode.Space)){
+			if((Input.GetKeyDown(KeyCode.Space)) &&(gameManager.L5Laser == true)){
 				StartCoroutine(LaserTwoOff());
 				// Set the text in the game manager to appear
 				gameManager.grab = true;
+				gameManager.L5Laser = false;
 			}
 		}
 

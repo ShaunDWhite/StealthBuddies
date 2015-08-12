@@ -25,6 +25,8 @@ public class s_GameManager : MonoBehaviour {
 	public bool EndTwo = false;
 	public bool	EndBoth = false;
 
+	public bool L5Laser = true;
+
 	//Awake is always called before any Start functions
 	void Awake()
 	{
