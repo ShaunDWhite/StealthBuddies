@@ -57,6 +57,14 @@ public class s_GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+			if (Application.loadedLevelName == "MainMenu") {
+			EndOne = false;
+			EndTwo = false;
+			EndBoth = false;
+			grab = true;
+			L5Laser = true;
+				}
+
 				if(Application.loadedLevelName == "EndGame"){
 					LoadEnd();
 				}				
