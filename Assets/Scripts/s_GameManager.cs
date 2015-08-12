@@ -19,9 +19,7 @@ public class s_GameManager : MonoBehaviour {
 	public bool save;
 	public bool who;
 
-	public GameObject grabText;
-	public GameObject saveText;
-	public GameObject whoText;
+
 
 	public bool EndOne = false;
 	public bool EndTwo = false;
@@ -60,32 +58,7 @@ public class s_GameManager : MonoBehaviour {
 				if(Application.loadedLevelName == "EndGame"){
 					LoadEnd();
 				}
-				if (Application.loadedLevelName == "Level_5") {
-					grabText = GameObject.Find ("Grab");
-					saveText = GameObject.Find ("Save");
-					whoText = GameObject.Find ("Who");
-				}
-				if (grab == true) {
-						grabText.SetActive (true);
-						saveText.SetActive (false);	
-						whoText.SetActive (false);	
-						save = false;
-						who = false;
-				}
-				if (save == true) {
-						saveText.SetActive (true);
-						grabText.SetActive (false);	
-						whoText.SetActive (false);
-						grab = false;
-						who = false;
-				}
-				if (who == true) {
-						whoText.SetActive (true);
-						saveText.SetActive (false);	
-						grabText.SetActive (false);
-						grab = false;
-						save = false;
-				}	
+				
 		}
 
 	public void Detected(){
