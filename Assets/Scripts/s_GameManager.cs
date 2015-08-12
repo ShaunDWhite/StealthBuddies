@@ -49,11 +49,7 @@ public class s_GameManager : MonoBehaviour {
 
 
 	void Start(){
-//		if (Application.loadedLevelName == "Level_5") {
-//			grabText = GameObject.Find ("Grab");
-//			saveText = GameObject.Find ("Save");
-//			whoText = GameObject.Find ("Who");
-//		}
+
 	}
 
 
@@ -61,7 +57,9 @@ public class s_GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+				if(Application.loadedLevelName == "EndGame"){
+					LoadEnd();
+				}
 				if (Application.loadedLevelName == "Level_5") {
 					grabText = GameObject.Find ("Grab");
 					saveText = GameObject.Find ("Save");
@@ -87,18 +85,24 @@ public class s_GameManager : MonoBehaviour {
 						grabText.SetActive (false);
 						grab = false;
 						save = false;
-				}
-//				if (Application.loadedLevelName == "Level_5") {
-//						grabText = GameObject.Find ("Grab");
-//						saveText = GameObject.Find ("Save");
-//						whoText = GameObject.Find ("Who");
-//				}
-	
+				}	
 		}
-
 
 	public void Detected(){
 		Application.LoadLevel(Application.loadedLevel);
+	}
+
+	public void LoadEnd(){
+		if(EndOne == true){
+			Debug.Log("one end");
+		}
+		if(EndTwo == true){
+			Debug.Log("two end");
+		}
+		if(EndBoth == true){
+			Debug.Log("both end");
+
+		}
 	}
 
 

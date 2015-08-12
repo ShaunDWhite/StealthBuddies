@@ -39,9 +39,11 @@ public class s_OneLoadEnd : MonoBehaviour {
 	
 	void LoadEnd(){
 		if (One == true) {
-						// Load End Scene for player one
+			gameManager.EndOne = true;
+			Application.LoadLevel("EndGame");
 				} else if (Two == true) {
-					//load end scene for player two. 
+			gameManager.EndTwo = true;
+			Application.LoadLevel("EndGame");
 				}
 	}
 }

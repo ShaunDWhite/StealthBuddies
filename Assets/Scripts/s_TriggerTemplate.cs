@@ -43,7 +43,8 @@ public class s_TriggerTemplate : MonoBehaviour {
 
 	void LoadEnd(){
 		if ((One == true) && (Two == true)) {
-			// Load End Scene for both players :D
+			gameManager.EndBoth = true;
+			Application.LoadLevel("EndGame");
 		}
 	}
 
