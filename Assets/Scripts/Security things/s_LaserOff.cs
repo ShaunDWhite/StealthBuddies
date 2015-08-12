@@ -70,11 +70,9 @@ public class s_LaserOff : MonoBehaviour {
 			else if(gameObject.name == "Laser_Off_Button_P1_1"){
 				L5_1 = true;
 			}
-			else if(gameObject.name == "Laser_Off_Button_P1_2"){
-				L5_2 = true;
+			else if(gameObject.name == "Laser_Off_Button_P2_2"){
+				L5_4 = true;
 			}
-
-
 
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
@@ -102,12 +100,14 @@ public class s_LaserOff : MonoBehaviour {
 			}
 
 			//Level 5
+
+			else if(gameObject.name == "Laser_Off_Button_P1_2"){
+				L5_2 = true;
+			}
 			else if(gameObject.name == "Laser_Off_Button_P2_1"){
 				L5_3 = true;
 			}
-			else if(gameObject.name == "Laser_Off_Button_P2_2"){
-				L5_4 = true;
-			}
+
 
 		}
 	}
@@ -138,11 +138,12 @@ public class s_LaserOff : MonoBehaviour {
 			}
 
 			//Level 5
+
 			else if(gameObject.name == "Laser_Off_Button_P1_1"){
 				L5_1 = false;
 			}
-			else if(gameObject.name == "Laser_Off_Button_P1_2"){
-				L5_2 = false;
+			else if(gameObject.name == "Laser_Off_Button_P2_2"){
+				L5_4 = false;
 			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){
@@ -169,12 +170,13 @@ public class s_LaserOff : MonoBehaviour {
 				L4_4 = false;
 			}
 
-			//Level 5
+			// Level 5
+
+			else if(gameObject.name == "Laser_Off_Button_P1_2"){
+				L5_2 = false;
+			}
 			else if(gameObject.name == "Laser_Off_Button_P2_1"){
 				L5_3 = false;
-			}
-			else if(gameObject.name == "Laser_Off_Button_P2_2"){
-				L5_4 = false;
 			}
 		}
 	}
@@ -251,13 +253,14 @@ public class s_LaserOff : MonoBehaviour {
 		}
 
 		if (L5_2) { 
-			if(Input.GetButtonDown("A")){
-				StartCoroutine(LaserTwoOff());
+			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
+				//StartCoroutine(LaserTwoOff());
+				StartCoroutine(LaserOneOff());
 			}
 		}
 
 		if (L5_3) { 
-			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
+			if(Input.GetKeyDown(KeyCode.Space)){
 				StartCoroutine(LaserTwoOff());
 				// Set the text in the game manager to appear
 				gameManager.grab = true;
@@ -266,8 +269,8 @@ public class s_LaserOff : MonoBehaviour {
 
 		if (L5_4) { 
 			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
-				StartCoroutine(LaserOneOff());
-
+				//StartCoroutine(LaserOneOff());
+				StartCoroutine(LaserTwoOff());
 			}
 		}
 

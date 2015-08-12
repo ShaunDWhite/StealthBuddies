@@ -57,8 +57,7 @@ public class s_GameManager : MonoBehaviour {
 	void Update () {
 				if(Application.loadedLevelName == "EndGame"){
 					LoadEnd();
-				}
-				
+				}				
 		}
 
 	public void Detected(){
@@ -74,7 +73,6 @@ public class s_GameManager : MonoBehaviour {
 		}
 		if(EndBoth == true){
 			Debug.Log("both end");
-
 		}
 	}
 
