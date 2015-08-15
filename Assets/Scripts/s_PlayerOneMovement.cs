@@ -23,14 +23,18 @@ public class s_PlayerOneMovement : MonoBehaviour {
 	 * */
 
 	public float MovementSpeed = 5;
+	public s_GameManager gameManager;
 
 	// Use this for initialization
 	void Start () {
+		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
 
 	}
 
 	void Update(){
-		Movement();	
+		if(gameManager.P1_Move == true){
+			Movement();	
+		}
 	}
 	public void Movement(){
 		transform.Translate(0,-(Input.GetAxis("Vertical") * Time.deltaTime * MovementSpeed),0);			//Vertical movement

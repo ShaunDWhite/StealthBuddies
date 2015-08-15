@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AI_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Arrows\s_PlayerOneArrows.cs" />
      <Compile Include="Assets\Scripts\Level Change\s_LoadNextLevel.cs" />
      <Compile Include="Assets\Scripts\Menus\s_PlayGame.cs" />
      <Compile Include="Assets\Scripts\Menus\s_Quit.cs" />
