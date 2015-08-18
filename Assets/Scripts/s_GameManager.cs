@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Metrics
+using CobaltMetrics;
+using CobaltMetrics.DataTypes;
+using CobaltMetrics.DataTypes.Unity;
+
 public class s_GameManager : MonoBehaviour {
 	public static s_GameManager instance = null;
 	//We'll need to make these scripts as part of the 
@@ -77,9 +82,16 @@ public class s_GameManager : MonoBehaviour {
 				}				
 		}
 
-	public void Detected(){
+	public void Detected(string obj, int player, Vector3 objPos){
 //		Application.LoadLevel(Application.loadedLevel);
 		if (reset == false) {
+			//Metrics Begin
+			CMetricNative.Int("playerDetected", player);
+			CMetricNative.String("detectedObj", obj);
+			CMetricVector.Vector3("detectedObjPos", objPos);
+			CMetricNative.Int ("detectedLevel", Application.loadedLevel);
+			//Metrics End
+
 			reset = true;
 			StartCoroutine (RestartLevel ());
 				}

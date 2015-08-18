@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using CobaltMetrics.DataTypes;
+
 public class s_TriggerTemplate : MonoBehaviour {
 
 	//Copy and paste this into a new script for use on other objects. 
@@ -41,9 +43,15 @@ public class s_TriggerTemplate : MonoBehaviour {
 		}
 	}
 
+	//METRICS - Both players made ending.
 	void LoadEnd(){
 		if ((One == true) && (Two == true)) {
 			gameManager.EndBoth = true;
+
+			//Metrics
+			CMetricNative.String("endType", "p1andp2"); //Metrics
+			CobaltMetrics.Metrics.StopMetrics();
+
 			Application.LoadLevel("EndGame");
 		}
 	}

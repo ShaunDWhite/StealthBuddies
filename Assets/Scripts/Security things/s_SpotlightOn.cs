@@ -16,13 +16,13 @@ public class s_SpotlightOn : MonoBehaviour {
 		if(col.gameObject.name == "PlayerOneTest"){				
 			if(LightIsOn){
 				gameManager.P1_Detected = true;
-				gameManager.Detected();
+				gameManager.Detected("spotlight", 1, transform.position); //Metrics Edit.
 			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){		
 			if(LightIsOn){
 				gameManager.P2_Detected = true;
-				gameManager.Detected();
+				gameManager.Detected("spotlight", 2, transform.position); //Metrics Edit.
 			}
 		}
 	}
@@ -31,13 +31,13 @@ public class s_SpotlightOn : MonoBehaviour {
 		if(col.gameObject.name == "PlayerTwoTest"){
 			if(LightIsOn){
 				gameManager.P2_Detected = true;
-				gameManager.Detected();
+				gameManager.Detected("spotlight", 2, transform.position); //Metrics Edit.
 			}
 		}
 		else if(col.gameObject.name == "PlayerOneTest"){
 			if(LightIsOn){
 				gameManager.P1_Detected = true;
-				gameManager.Detected();
+				gameManager.Detected("spotlight", 1, transform.position); //Metrics Edit.
 			}
 		}
 	}

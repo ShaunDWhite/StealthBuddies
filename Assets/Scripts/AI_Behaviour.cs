@@ -204,12 +204,12 @@ public class AI_Behaviour : MonoBehaviour {
 		if(Col.tag == "Player One")
 		{
 			gameManager.P1_Detected = true;
-			gameManager.SendMessage("Detected");
+			gameManager.Detected("guard", 1, transform.position); //Metrics Edit.
 		}
 		else if(Col.tag == "Player Two")
 		{
 			gameManager.P2_Detected = true;
-			gameManager.SendMessage("Detected");
+			gameManager.Detected("guard", 2, transform.position); //Metrics Edit.
 		}
 	}
 

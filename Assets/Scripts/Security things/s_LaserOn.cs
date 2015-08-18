@@ -19,13 +19,13 @@ public class s_LaserOn : MonoBehaviour {
 			if(IsTurnedOn){	
 				//AudioSource.PlayClipAtPoint(LaserClip, transform.position);
 				gameManager.P1_Detected = true;
-				gameManager.Detected();
+				gameManager.Detected("laser", 1, transform.position); //Metrics Edit
 			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){				
 			if(IsTurnedOn){
 				gameManager.P2_Detected = true;
-				gameManager.Detected();
+				gameManager.Detected("laser", 2, transform.position); //Metrics Edit
 			}
 		}
 	}

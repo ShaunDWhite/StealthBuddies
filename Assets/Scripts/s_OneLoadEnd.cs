@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Metrics
+using CobaltMetrics;
+using CobaltMetrics.DataTypes;
+using CobaltMetrics.DataTypes.Unity;
+
 public class s_OneLoadEnd : MonoBehaviour {
 
 	public bool One, Two;
@@ -36,13 +41,18 @@ public class s_OneLoadEnd : MonoBehaviour {
 			Two = false;
 		}
 	}
-	
+
+	//METRICS : Called when one player enters the next room.
 	void LoadEnd(){
 		if (One == true) {
 			gameManager.EndOne = true;
+			CMetricNative.String("endType", "p1Only"); //Metrics
+			CobaltMetrics.Metrics.StopMetrics();
 			Application.LoadLevel("EndGame");
 				} else if (Two == true) {
 			gameManager.EndTwo = true;
+			CMetricNative.String("endType", "p2Only"); //Metrics
+			CobaltMetrics.Metrics.StopMetrics();
 			Application.LoadLevel("EndGame");
 				}
 	}
