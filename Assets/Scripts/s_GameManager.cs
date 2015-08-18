@@ -21,6 +21,9 @@ public class s_GameManager : MonoBehaviour {
 
 	public bool P1_Move;
 	public bool P2_Move;
+	public bool reset;
+	public bool P1_Detected;
+	public bool P2_Detected;
 
 
 	public bool EndOne = false;
@@ -74,8 +77,12 @@ public class s_GameManager : MonoBehaviour {
 		}
 
 	public void Detected(){
-		Application.LoadLevel(Application.loadedLevel);
-		//StartCoroutine(RestartLevel() );
+//		Application.LoadLevel(Application.loadedLevel);
+		if (reset == false) {
+			reset = true;
+			Debug.Log ("fdkjsgf");
+			StartCoroutine (RestartLevel ());
+				}
 	}
 
 	public void LoadEnd(){
@@ -90,19 +97,27 @@ public class s_GameManager : MonoBehaviour {
 		}
 	}
 
-//	public IEnumerator RestartLevel(){
-//		P1_Move = false;
-//		yield return new WaitForSeconds(3);
-//		//Reset();
-//		Application.LoadLevel(Application.loadedLevel);
-//		Reset();
-//
-//	}
-//
-//	public void Reset(){
-//		P1_Move = true;
-//		P2_Move = true;
-//	}
+	public IEnumerator RestartLevel(){
+		if (P1_Detected == true) {
+				P1_Move = false;
+				P2_Move = false;
+		} else if (P2_Detected == true) {
+			P1_Move = false;
+			P2_Move = false;
+		}
+		yield return new WaitForSeconds(3);
+		Reset();
+		Application.LoadLevel(Application.loadedLevel);
+
+	}
+
+	public void Reset(){
+		P1_Move = true;
+		P2_Move = true;
+		reset = false;
+		P1_Detected = false;
+		P2_Detected = false;
+	}
 
 
 

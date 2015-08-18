@@ -15,14 +15,16 @@ public class s_LaserOn : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.name == "PlayerOneTest"){						//if player one
+		if(col.gameObject.name == "PlayerOneTest"){						
 			if(IsTurnedOn){	
 				//AudioSource.PlayClipAtPoint(LaserClip, transform.position);
+				gameManager.P1_Detected = true;
 				gameManager.Detected();
 			}
 		}
-		else if(col.gameObject.name == "PlayerTwoTest"){				//if player 2
-			if(IsTurnedOn){												//if turned on
+		else if(col.gameObject.name == "PlayerTwoTest"){				
+			if(IsTurnedOn){
+				gameManager.P2_Detected = true;
 				gameManager.Detected();
 			}
 		}

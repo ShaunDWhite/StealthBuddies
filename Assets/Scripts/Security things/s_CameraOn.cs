@@ -16,13 +16,15 @@ public class s_CameraOn : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D col){					
-		if(col.gameObject.name == "PlayerOneTest"){				//if player one
-			if(IsOn){											// if turned on
+		if(col.gameObject.name == "PlayerOneTest"){				
+			if(IsOn){
+				gameManager.P1_Detected = true;
 				gameManager.Detected();
 			}
 		}
-		else if(col.gameObject.name == "PlayerTwoTest"){		// if player 2
-			if(IsOn){											// if turned on
+		else if(col.gameObject.name == "PlayerTwoTest"){		
+			if(IsOn){
+				gameManager.P2_Detected = true;
 				gameManager.Detected();
 			}
 		}
@@ -32,11 +34,13 @@ public class s_CameraOn : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col){
 		if(col.gameObject.name == "PlayerTwoTest"){
 			if(IsOn){
+				gameManager.P2_Detected = true;
 				gameManager.Detected();
 			}
 		}
 		else if(col.gameObject.name == "PlayerOneTest"){
 			if(IsOn){
+				gameManager.P1_Detected = true;
 				gameManager.Detected();
 			}
 		}

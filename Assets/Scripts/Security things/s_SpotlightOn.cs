@@ -13,13 +13,15 @@ public class s_SpotlightOn : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.name == "PlayerOneTest"){				//If player one
-			if(LightIsOn){										// if it's turned on
+		if(col.gameObject.name == "PlayerOneTest"){				
+			if(LightIsOn){
+				gameManager.P1_Detected = true;
 				gameManager.Detected();
 			}
 		}
-		else if(col.gameObject.name == "PlayerTwoTest"){		//if player 2
-			if(LightIsOn){										//if its turned on			
+		else if(col.gameObject.name == "PlayerTwoTest"){		
+			if(LightIsOn){
+				gameManager.P2_Detected = true;
 				gameManager.Detected();
 			}
 		}
@@ -28,11 +30,13 @@ public class s_SpotlightOn : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col){
 		if(col.gameObject.name == "PlayerTwoTest"){
 			if(LightIsOn){
+				gameManager.P2_Detected = true;
 				gameManager.Detected();
 			}
 		}
 		else if(col.gameObject.name == "PlayerOneTest"){
 			if(LightIsOn){
+				gameManager.P1_Detected = true;
 				gameManager.Detected();
 			}
 		}
