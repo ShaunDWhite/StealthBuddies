@@ -81,7 +81,6 @@ public class s_GameManager : MonoBehaviour {
 //		Application.LoadLevel(Application.loadedLevel);
 		if (reset == false) {
 			reset = true;
-			Debug.Log ("fdkjsgf");
 			StartCoroutine (RestartLevel ());
 				}
 	}
