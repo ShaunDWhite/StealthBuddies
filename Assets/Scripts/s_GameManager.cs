@@ -118,6 +118,9 @@ public class s_GameManager : MonoBehaviour {
 		reset = false;
 		P1_Detected = false;
 		P2_Detected = false;
+		L5Laser = true;
+		who = true;
+		save = false;
 	}
 
 
