@@ -1,21 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menus\s_ReturnToMainMenu.cs">
-    <Files>
-      <File FileName="Assets\Scripts\Menus\s_Start.cs" Line="19" Column="1" />
-      <File FileName="Assets\Scripts\s_GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Arrows\s_PlayerOneArrows.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Security things\s_LaserOn.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\s_OneLoadEnd.cs" Line="49" Column="1" />
-      <File FileName="Assets\Scripts\Level Change\s_LoadNextLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\s_TriggerTemplate.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menus\s_PlayGame.cs" Line="18" Column="1" />
-      <File FileName="Assets\Scripts\AI_Behaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Security things\s_SpotlightOn.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Security things\s_CameraOn.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menus\s_ReturnToMainMenu.cs" Line="12" Column="14" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
