@@ -72,6 +72,7 @@ public class s_GameManager : MonoBehaviour {
 			EndOne = false;
 			EndTwo = false;
 			EndBoth = false;
+			grab = false;
 			save = false;
 			who = true;
 			L5Laser = true;
