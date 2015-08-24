@@ -8,6 +8,12 @@ public class s_CameraOff : MonoBehaviour {
 	public float Timer = 1.5f;
 	public bool P1_Press = false, 
 				P2_Press = false;
+	public s_GameManager gameManager;
+
+
+	public void Start(){
+		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
+	}
 
 
 	public IEnumerator CameraOneOff(){
@@ -27,17 +33,20 @@ public class s_CameraOff : MonoBehaviour {
 	void Update(){
 		if (P1_Press) {
 			if(Input.GetButtonDown("A")){
+				gameManager.ButtonAudio();
 				StartCoroutine(CameraOneOff());
 			}
 		}
 		if (P2_Press) {
 			if(Input.GetKeyDown(KeyCode.Space)){
 				if(Application.loadedLevelName == "Level_4"){
+					gameManager.ButtonAudio();
 					StartCoroutine(CameraOneOff());
 					StartCoroutine(CameraTwoOff());
 				}
 				else {
-				StartCoroutine(CameraTwoOff());
+					gameManager.ButtonAudio();
+					StartCoroutine(CameraTwoOff());
 				}
 			}
 		}

@@ -41,6 +41,7 @@ public class s_GameManager : MonoBehaviour {
 	public AudioClip LaserClip;
 	public AudioClip GuardClip;
 	public AudioClip ElectronicClip;
+	public AudioClip ButtonClick;
 	public bool LaserOnce = true;
 	public bool GuardOnce = true;
 	public bool ElectronicOnce = true;
@@ -174,8 +175,8 @@ public class s_GameManager : MonoBehaviour {
 		}
 	}
 
-	public void ButtonClick(){
-
+	public void ButtonAudio(){
+		AudioSource.PlayClipAtPoint(ButtonClick, transform.position);
 	}
 
 

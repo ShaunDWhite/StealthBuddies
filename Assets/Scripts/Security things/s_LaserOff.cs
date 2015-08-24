@@ -189,26 +189,31 @@ public class s_LaserOff : MonoBehaviour {
 
 		if(L1){
 			if(Input.GetKeyDown(KeyCode.Space)){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserOneOff ());
 			}
 		}
 		if(L2){
 			if(Input.GetKeyDown(KeyCode.Space)){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserTwoOff ());
 			}
 		}
 		if(L3){
 			if(Input.GetButtonDown("A")){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserThreeOff());
 			}
 		}
 		if(L4){
 			if(Input.GetButtonDown("A")){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserFourOff());
 			}
 		}
 		if(LvL3){
 			if(Input.GetKeyDown(KeyCode.Space)){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserOneOff ());
 				StartCoroutine(LaserTwoOff ());
 			}
@@ -218,19 +223,23 @@ public class s_LaserOff : MonoBehaviour {
 
 		if(L4_1){
 			if(Input.GetKeyDown(KeyCode.Space)){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserOneOff());
 			}
 			else if(Input.GetButtonDown("A")){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserOneOff());
 			}
 		}
 		if(L4_2){
 			if(Input.GetButtonDown("A")){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserTwoOff());
 			}
 		}
 		if(L4_4){
 			if(Input.GetKeyDown(KeyCode.Space)){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserFourOff());		
 			}
 		}
@@ -238,6 +247,7 @@ public class s_LaserOff : MonoBehaviour {
 
 		if(L4_3){
 			if(Input.GetButtonDown("A")){
+				gameManager.ButtonAudio();
 				StartCoroutine(TwinLasers());
 				StartCoroutine(LaserThreeOff());
 			}
@@ -246,6 +256,7 @@ public class s_LaserOff : MonoBehaviour {
 		// Level 5
 		if (L5_1) {	
 			if((Input.GetButtonDown("A")) && (gameManager.L5Laser == true)){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserOneOff());
 				// Set the text in the game manager to appear
 				gameManager.grab = true;
@@ -255,13 +266,14 @@ public class s_LaserOff : MonoBehaviour {
 
 		if (L5_2) { 
 			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
-				//StartCoroutine(LaserTwoOff());
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserOneOff());
 			}
 		}
 
 		if (L5_3) { 
 			if((Input.GetKeyDown(KeyCode.Space)) &&(gameManager.L5Laser == true)){
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserTwoOff());
 				// Set the text in the game manager to appear
 				gameManager.grab = true;
@@ -271,7 +283,7 @@ public class s_LaserOff : MonoBehaviour {
 
 		if (L5_4) { 
 			if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetButtonDown("A"))){
-				//StartCoroutine(LaserOneOff());
+				gameManager.ButtonAudio();
 				StartCoroutine(LaserTwoOff());
 			}
 		}

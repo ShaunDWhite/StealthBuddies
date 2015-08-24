@@ -7,6 +7,12 @@ public class s_SpotlightOff : MonoBehaviour {
 	public float Timer = 1.5f;
 	public bool P2_Press = false;
 	public bool P1_Press = false;
+	public s_GameManager gameManager;
+
+	public void Start(){
+		gameManager = GameObject.Find ("GameManager").GetComponent<s_GameManager> ();
+
+	}
 
 	void OnTriggerStay2D(Collider2D col){
 		if(col.gameObject.name == "PlayerTwoTest"){
@@ -29,11 +35,13 @@ public class s_SpotlightOff : MonoBehaviour {
 	void Update(){
 		if (P2_Press) {
 			if(Input.GetKeyDown(KeyCode.Space)){
+				gameManager.ButtonAudio();
 				StartCoroutine(LightOff ());
 			}
 		}
 		if (P1_Press) {
 			if(Input.GetButtonDown("A")){
+				gameManager.ButtonAudio();
 				StartCoroutine(LightOff ());
 			}
 		}
