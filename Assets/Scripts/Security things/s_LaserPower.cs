@@ -24,10 +24,10 @@ public class s_LaserPower : MonoBehaviour {
 		L_BLOff.SetActive(false);
 		L_BROff.SetActive(false);
 
-		L1.SetActive(true);
-		L2.SetActive(true);
-		L3.SetActive(true);
-		L4.SetActive(true);
+	//	L1.SetActive(true);
+	//	L2.SetActive(true);
+	//	L3.SetActive(true);
+	//	L4.SetActive(true);
 	}
 	
 	// Update is called once per frame
