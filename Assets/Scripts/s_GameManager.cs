@@ -37,6 +37,16 @@ public class s_GameManager : MonoBehaviour {
 
 	public bool L5Laser = true;
 
+	// Audio
+	public AudioClip LaserClip;
+	public AudioClip GuardClip;
+	public AudioClip ElectronicClip;
+	public bool LaserOnce = true;
+	public bool GuardOnce = true;
+	public bool ElectronicOnce = true;
+
+
+
 	//Awake is always called before any Start functions
 	void Awake()
 	{
@@ -61,6 +71,9 @@ public class s_GameManager : MonoBehaviour {
 	void Start(){
 		P1_Move = true;
 		P2_Move = true;
+		LaserOnce = true;
+		GuardOnce = true;
+		ElectronicOnce = true;
 	}
 
 
@@ -133,7 +146,39 @@ public class s_GameManager : MonoBehaviour {
 		L5Laser = true;
 		who = true;
 		save = false;
+		ElectronicOnce = true;
+		GuardOnce = true;
+		LaserOnce = true;
 	}
+
+
+	public void LaserAudio(){
+		if(LaserOnce){
+			AudioSource.PlayClipAtPoint(LaserClip, transform.position);
+			LaserOnce = false;
+		}
+	}
+
+	public void ElectronicAudio(){
+		if(ElectronicOnce){
+			AudioSource.PlayClipAtPoint(ElectronicClip, transform.position);
+			ElectronicOnce = false;
+		}
+	}
+
+
+	public void GuardAudio(){
+		if(GuardOnce){
+			AudioSource.PlayClipAtPoint(GuardClip, transform.position);
+			GuardOnce = false;
+		}
+	}
+
+	public void ButtonClick(){
+
+	}
+
+
 
 
 

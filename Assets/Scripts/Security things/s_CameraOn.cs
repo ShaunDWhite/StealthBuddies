@@ -19,12 +19,14 @@ public class s_CameraOn : MonoBehaviour {
 		if(col.gameObject.name == "PlayerOneTest"){				
 			if(IsOn){
 				gameManager.P1_Detected = true;
+				gameManager.ElectronicAudio();
 				gameManager.Detected("camera", 1, transform.position); //Metrics Edit
 			}
 		}
 		else if(col.gameObject.name == "PlayerTwoTest"){		
 			if(IsOn){
 				gameManager.P2_Detected = true;
+				gameManager.ElectronicAudio();
 				gameManager.Detected("camera", 2, transform.position); //Metrics Edit
 			}
 		}
@@ -35,12 +37,14 @@ public class s_CameraOn : MonoBehaviour {
 		if(col.gameObject.name == "PlayerTwoTest"){
 			if(IsOn){
 				gameManager.P2_Detected = true;
+				gameManager.ElectronicAudio();
 				gameManager.Detected("camera", 2, transform.position); //Metrics Edit
 			}
 		}
 		else if(col.gameObject.name == "PlayerOneTest"){
 			if(IsOn){
 				gameManager.P1_Detected = true;
+				gameManager.ElectronicAudio();
 				gameManager.Detected("camera", 1, transform.position); //Metrics Edit
 			}
 		}

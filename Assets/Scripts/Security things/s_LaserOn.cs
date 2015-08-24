@@ -5,8 +5,6 @@ public class s_LaserOn : MonoBehaviour {
 
 	public bool IsTurnedOn = true;
 	public s_GameManager gameManager;
-	//public AudioClip LaserClip;
-	
 	
 	
 	// Use this for initialization
@@ -17,7 +15,7 @@ public class s_LaserOn : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.name == "PlayerOneTest"){						
 			if(IsTurnedOn){	
-				//AudioSource.PlayClipAtPoint(LaserClip, transform.position);
+				gameManager.LaserAudio();
 				gameManager.P1_Detected = true;
 				gameManager.Detected("laser", 1, transform.position); //Metrics Edit
 			}
@@ -25,6 +23,7 @@ public class s_LaserOn : MonoBehaviour {
 		else if(col.gameObject.name == "PlayerTwoTest"){				
 			if(IsTurnedOn){
 				gameManager.P2_Detected = true;
+				gameManager.LaserAudio();
 				gameManager.Detected("laser", 2, transform.position); //Metrics Edit
 			}
 		}
