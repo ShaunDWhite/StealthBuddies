@@ -8,7 +8,7 @@ public class s_ReturnToMainMenu : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		if(gameObject.name == "Return2"){
+		if(gameObject.name == "Return"){
 			Return ();
 		}
 	}
