@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>E:/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>E:/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -81,16 +81,16 @@
      <Compile Include="Assets\Scripts\s_TriggerSpotlight.cs" />
      <Compile Include="Assets\Scripts\s_TriggerTemplate.cs" />
  <Reference Include="UnityEngine.UI">
- <HintPath>E:/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="CobaltMetrics">
- <HintPath>E:/Stealth Buddies/StealthBuddies/Assets/Plugins/x86/CobaltMetrics.dll</HintPath>
+ <HintPath>C:/Users/swhite52.SAE/Documents/GitHub/StealthBuddies/Assets/Plugins/x86/CobaltMetrics.dll</HintPath>
  </Reference>
  <Reference Include="CobaltMetricsUnity">
- <HintPath>E:/Stealth Buddies/StealthBuddies/Assets/Plugins/x86/CobaltMetricsUnity.dll</HintPath>
+ <HintPath>C:/Users/swhite52.SAE/Documents/GitHub/StealthBuddies/Assets/Plugins/x86/CobaltMetricsUnity.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>E:/Stealth Buddies/StealthBuddies/Assets/Plugins/x86/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/swhite52.SAE/Documents/GitHub/StealthBuddies/Assets/Plugins/x86/Newtonsoft.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
