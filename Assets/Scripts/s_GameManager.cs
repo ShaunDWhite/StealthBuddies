@@ -90,12 +90,14 @@ public class s_GameManager : MonoBehaviour {
 			save = false;
 			who = true;
 			L5Laser = true;
+			playerOneHolyGrail = false;
+			playerTwoHolyGrail = false;
 				}
 
 				if(Application.loadedLevelName == "EndGame"){
 					LoadEnd();
-				}				
-		}
+				}	
+	}
 
 	public void Detected(string obj, int player, Vector3 objPos){
 //		Application.LoadLevel(Application.loadedLevel);

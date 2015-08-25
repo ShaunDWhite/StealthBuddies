@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\s_Bars.cs" />
      <Compile Include="Assets\Scripts\s_GameManager.cs" />
      <Compile Include="Assets\Scripts\s_GetTheTextPopUps.cs" />
+     <Compile Include="Assets\Scripts\s_GrailControl.cs" />
      <Compile Include="Assets\Scripts\s_GuardPatrol.cs" />
      <Compile Include="Assets\Scripts\s_Loader.cs" />
      <Compile Include="Assets\Scripts\s_ObtainSpeaker.cs" />
