@@ -7,5 +7,14 @@ public class s_Quit : MonoBehaviour {
 		if(Input.GetKey(KeyCode.Escape)){
 			Application.LoadLevel("MainMenu");
 		}
+	
+		if(Application.loadedLevelName == "MainMenu"){
+			if(Input.GetKey(KeyCode.Escape)){
+				Application.Quit ();
+				Debug.Log("asd");
+			}
+		}
+	
+	
 	}
 }
