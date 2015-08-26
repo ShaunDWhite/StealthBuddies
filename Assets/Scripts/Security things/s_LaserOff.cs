@@ -226,10 +226,10 @@ public class s_LaserOff : MonoBehaviour {
 				gameManager.ButtonAudio();
 				StartCoroutine(LaserOneOff());
 			}
-			else if(Input.GetButtonDown("A")){
-				gameManager.ButtonAudio();
-				StartCoroutine(LaserOneOff());
-			}
+//			else if(Input.GetButtonDown("A")){
+//				gameManager.ButtonAudio();
+//				StartCoroutine(LaserOneOff());
+//			}
 		}
 		if(L4_2){
 			if(Input.GetButtonDown("A")){
