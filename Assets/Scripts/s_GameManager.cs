@@ -152,6 +152,8 @@ public class s_GameManager : MonoBehaviour {
 		ElectronicOnce = true;
 		GuardOnce = true;
 		LaserOnce = true;
+		playerOneHolyGrail = false;
+		 playerTwoHolyGrail = false;
 	}
 
 
